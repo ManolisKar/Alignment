@@ -1,0 +1,186 @@
+\section{\label{sec:operations} Operations}
+
+The experiment has completed \runone~and is now in \runtwo, where EQS voltages for physics data-taking are chosen in the 15 to \SI{21}{\kilo\volt} range and are specifically selected to reduce resonance effects. Several sets of voltages are necessary, as the EQS does not always have stable operations due to spark recovery difficulties. The spark rate depends on conditions such as recent vacuum system exposure to atmosphere, extended EQS off-time, vacuum pressure, and EQS operating voltages. Collecting data at several different EQS operating voltages provides an opportunity for beam-dynamics related systematic checks. Finally, the EQS is used to scrape the beam for \SI{\sim7}{\micro\second} when taking physics data.
+
+\subsection{\label{sec:cbo} Coherent Betatron Oscillations}
+\textcolor{orange}{Bill \& Jason}
+\medskip
+
+There is a $\chi^{2}$ fit artifact that can lead to a shift in the $\omega_{a}$ fit value when the CBO angular frequency is an integer multiple of $\omega_{a}$, see Fig.~\ref{fig:cbo_fit_resonance}.  
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig33}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig33}
+	\caption{\textcolor{orange}{Jason} The twice $\omega_{a}$ CBO frequency $\chi^{2}$ fit resonance.}\label{fig:cbo_fit_resonance}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+\subsection{\label{sec:reson} Betatron \& Spin Resonances}
+\textcolor{orange}{Bill \& Jason}
+\medskip
+
+Figure~\ref{fig:storage_scan} shows the relative number of decay positrons, as measured by the Fermilab experiment real time Data Quality Monitoring (DQM) system, when beam scraping is turned off. Beam scraping can obscure individual betatron resonance effects, as the transition from scraping to storage voltages moves the beam through multiple resonances. A reduction in decay positrons is seen due to betatron resonances centered near the 13.0, 16.8, 18.8 and \SI{21.2}{\kilo\volt} EQS storage set-point voltages. An increase in lost muons due to betatron resonances is also measured with the calorimeters~\cite{Ganguly:IPAC2018-THPAK139}.
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig05a}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig05a}
+		\caption{}\label{fig:storage_scan_180210}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig05b}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig05b}
+		\caption{}\label{fig:storage_scan_180324}
+	\end{subfigure}
+	\caption{\textcolor{orange}{Jason} Typical relative number of decay positron scans as a function of EQS storage set-point voltage taken without scraping. \textcolor{red}{\textit{Should remove run numbers and renormalize to \SI{20.4}{\kilo\volt} values.}}}\label{fig:storage_scan}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+In Fig.~\ref{fig:storage_scan} the decay positron calorimeter events pass the energy ($E_{e}$) cut $E_{e}>\SI{1.8}{\giga\eV}$ and time after injection ($t_{i}$) cut $t_{i}>\SI{21.25}{\micro\second}$, while all cluster calorimeter events pass the cuts $E_{e}>\SI{0.1}{\giga\eV}$ and $t_{i}>\SI{18.75}{\micro\second}$. The T0 counter is a scintillator detector used to measure the muon beam flux just before injection into the storage ring. The ``Decay Positrons / T0 Integral'' quantity provides a measure of storage efficiency for a given set of run conditions, while the ``Decay Positrons / All Clusters'' quantity provides a measure of $\omega_{a}$ signal relative to calorimeter signal for ``stored'' muons. Both quantities are reduced by betatron resonances due to an increase in lost muons.
+
+The 15.0, 18.3 and \SI{20.4}{\kilo\volt} storage set-points were chosen for \runone~to avoid betatron resonances,
+\begin{equation}
+	l\nu_{x}+m\nu_{y}=n,
+	\label{eq:betatron_res_line}
+\end{equation}
+and spin resonances,
+\begin{equation}
+	l\nu_{x}+m\nu_{y}=n+\nu_{a},
+	\label{eq:spin_res_line}
+\end{equation}
+where $\nu_{x}$ and $\nu_{y}$ denote the horizontal and vertical betatron tunes respectively, along with the integers $l$, $m$, and $n$ \textcolor{red}{\textit{[ref. BD paper]}}. The spin tune in Eq.~(\ref{eq:spin_res_line}) is given by $\nu_{a}=\left.\omega_{a}\middle/\omega_{c}\right.=a_{\mu}\gamma$, where $\omega_{c}$ is the cyclotron angular frequency of the storage ring. Figure~\ref{fig:tune_plane} shows the storage ring tune plane with resonance lines given by Eqs.~(\ref{eq:betatron_res_line}) and~(\ref{eq:spin_res_line}). There are diminishing returns for the experiment when running at higher voltages. Figure~\ref{fig:storage_scan} shows that the slope of the baseline storage efficiency curve decreases above \SI{16.5}{\kilo\volt}, and the pitch and electric field corrections for $\omega_{a}$ increase with higher voltage settings \textcolor{red}{\textit{[ref. BD paper]}}. Figure~\ref{fig:storage_scan} also shows that the storage efficiency is ``small'' and rapidly decreases below \SI{15.0}{\kilo\volt}.
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig35a}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig35a}
+		\caption{}\label{fig:betatron_tune_plane}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig35b}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig35b}
+		\caption{}\label{fig:spin_tune_plane}
+	\end{subfigure}
+	\caption{\textcolor{orange}{Jason} The Muon~\gmtwo~storage ring tune plane with betatron (a) and spin (b) resonance lines, see Eqs.~(\ref{eq:betatron_res_line}) and~(\ref{eq:spin_res_line}). }\label{fig:tune_plane}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+\subsection{\label{sec:scraping} Scraping}
+\textcolor{orange}{Sudeshna}
+\medskip
+
+Figure~\ref{fig:lost_muon_scan} shows a typical lost muon curve for an EQS voltage scan. 
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{thpak139-fig3.pdf}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{thpak139-fig3.pdf}
+	\caption{\textcolor{orange}{Sudeshna} Relative number of lost muons as a function of EQS storage set-point voltage for calorimeter 1. This data was taken without scraping. \textcolor{red}{\textit{Should add run date and renormalize to \SI{20.4}{\kilo\volt} values.}}}\label{fig:lost_muon_scan}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+\subsection{\label{sec:damaged_res} Damaged Resistors}
+\textcolor{orange}{??? \& Jason}
+\medskip
+
+\textcolor{red}{\textit{This section is going to require some real work!!!}}
+
+\medskip
+\textcolor{red}{\textit{See doc-db 15658 (not for publication).}}
+\medskip
+
+Figure~\ref{fig:bad_resistor_signal} shows a capacitive voltage probe signal with an amplitude of \SI{\sim1}{\volt} for the damaged Q1LB resistor, which is near, but below the spark detection threshold. Actual quadrupole sparks produce signals with amplitudes of \SI{\sim8}{\volt}, e.g. see Fig.~\ref{fig:spark_signal} \textcolor{red}{\textit{[someone should double check the \SI{8}{\volt} number]}}. This problem was discovered in Q1L during \runone, as a damaged resistor signal would occasionally cross the spark threshold, but the cause was not understood until after the run finished.
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig06.png}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig06.png}
+	\caption{\textcolor{orange}{Volodya} Capacitive voltage probe signals from plates fed by the damaged Q1LB (blue) and undamaged Q1LO (red) resistors. \textcolor{red}{\textit{This is a copy from a Word document. We should try and get the original image.}}}\label{fig:bad_resistor_signal}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+The quadrupole plate input $RC$ time constants have a nominal \SI{5}{\micro\second} value for both the BNL~\cite{Semertzidis:2003zs} and Fermilab~\cite{Crnkovic:IPAC2018-WEPAF015} experiments. After \runone, during the Summer 2018 shutdown, 4 of the 32 potted resistors were found to have larger than expected resistance values; 2 of the 4 resistors have significant damage. These resistance values were initially measured with a digital multimeter, but the effective resistances of the damaged resistors depend on the applied voltage. Thus, a HV probe was used to measure the plate voltage response for 3 of the 4 damaged resistors at voltages used for data collection, see Figs.~\ref{fig:hv_probe_setup},~\ref{fig:hv_probe_adapt}, and~\ref{fig:bad_resistor_hvtraces}.
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_9107.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_9107.jpeg}
+	\caption{HV probe setup used for measuring quadrupole plate voltage.}\label{fig:hv_probe_setup}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_9116.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_9116.jpeg}
+		\caption{}\label{fig:hv_probe_adapt_front}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_9121.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_9121.jpeg}
+		\caption{}\label{fig:hv_probe_adapt_back}
+	\end{subfigure}
+	\caption{Custom made HV probe adapter used in the measurements of quadrupole plate voltage, see Fig.~\ref{fig:hv_probe_setup}.}\label{fig:hv_probe_adapt}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig07.png}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig07.png}
+	\caption{\textcolor{orange}{Jason} Oscilloscope traces of plate voltages for the damaged Q1LT (red), damaged Q1LB (blue), damaged Q4LT (brown), and undamaged Q1LI (orange) resistors. The green line indicates when the muon beam arrives, and the fits to the decay positron signal start \SI{\sim30}{\micro\second} after the arrival of the beam. \textcolor{red}{\textit{Need a description of the measurement conditions. Need a final version of this plot.}}}\label{fig:bad_resistor_hvtraces}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+The potted resistor design calls for \textcolor{red}{\textit{[details of HV resistor]}} resistors, but an insufficient number of theses resistors were delivered in time for \runone. Thus, 6 of the 32 potted resistors were made from a soldered chain of \textcolor{red}{\textit{[details of ``home-made'' HV resistors]}} resistors, see Fig.~\ref{fig:potted_resistors}, and 4 of these 6 potted resistors were eventually discovered to be damaged. A preliminary estimation of the systematic effect on $a_{\mu}$ due to the broken resistors is \textcolor{red}{\textit{$x\pm y$ [Volodya will do this, ... Bill says so!!!]}}.

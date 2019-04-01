@@ -1,0 +1,70 @@
+\section{\label{sec:intro} Introduction}
+\medskip
+
+% Give introduction of EQS.
+
+The g-2 storage ring acts as a weak-focusing betatron, with the vertical focusing provided by the Electrostatic Quadrupole System (EQS)~\cite{Semertzidis:2003zs}. A pure quadrupole electric field provides a linear restoring force in the vertical direction, and the combination of the (defocusing) electric field and the central (dipole) magnetic field provides a net linear restoring force in the radial direction. 
+
+Ideally, the EQS plates should fill as much of the azimuth as possible, but space is required for the inflector and kicker magnets, fiber monitors, and field trolley garage. 
+Both BNL and Fermilab Muon g-2 experiments chose a symmetric configuration which places the quadrupoles in four distinct regions, Q1-Q4, as shown in Fig.~\ref{fig:ring_schematic}.
+Gaps at \ang{0} and \ang{90} for the inflector and kicker magnets, along with empty gaps at \ang{180} and \ang{270} provide a four fold symmetry. 
+
+
+\begin{figure}[hb]
+	\centering
+	\includegraphics[width=0.80\textwidth]{ring_schematic.png}
+	\caption{A schematic overview of the \gmtwo storage ring. The locations of the 4 EQS sections are marked in red.}\label{fig:ring_schematic}
+\end{figure}
+
+
+
+Overall the electrodes occupy 43\% of the total circumference. The four-fold symmetry keeps the variation in the beta function small, which minimizes beam breathing and improves the muon orbit stability. Each quad segment consists of a short quad with azimuthal coverage of \ang{13} and a long quad of \ang{26}, for two reasons: 1) to make every quadrupole half-segment independent of others, facilitating their development, testing, etc., and 2) to reduce the extent of low-energy electron trapping. Therefore, there are two high-voltage vacuum-to-air interfaces for each quadrupole segment~\cite{Grange:2015fou}. 
+
+
+A schematic representation of a cross-section of the electrostatic quadrupoles is shown in Fig.~\ref{fig:electrode_endview} with the various dimensions indicated. 
+The four aluminum plates are symmetrically placed around the muon storage region, with \SI{10}{cm} between opposite plates. 
+
+
+
+\subsection*{Plate alignment}
+% Talk about importance of alignment and exact knowledge of plates' location.
+
+Any misalignment of ESQ plates translates to a modification of their E-field and thus a deviation from ideal storage conditions, inducing perturbations to the orbit of stored muons and systematic shifts to the experimental measurement. 
+Therefore good knowledge of the location of the ESQ plates is necessary for reliable operation and analysis.
+
+
+
+\begin{wrapfigure}{rt}{0.6\textwidth}
+	\centering
+	\includegraphics[width=0.56\textwidth]{electrode_endview.png}
+	\caption{A cross-sectional schematic view of the four electrodes, referred to as inner, outer, top, and bottom plates.}\label{fig:electrode_endview}
+\end{wrapfigure}
+
+
+
+The placement accuracy specifications for the EQS plates are determined by the estimated effects of a potential misplacement on the electric field and the muon orbit. For the vertically-installed side electrodes (inner and outer plates) the average deviation from the ideal position should be within \SI{0.75}{mm}. For the top and bottom plates the average deviation should be within \SI{0.5}{mm}. 
+% Why is the spec lower for the top/bottom plates? I don't think it's because they are more important for teh field/orbit. It may be because they are much easier to install accurately than the inner/outer.
+These are the same specifications as were used E821, and are retained for the Fermilab Muon g-2 Experiment.
+We further state that the standard deviation (RMS) over a short quad length should be less than $\pm$\SI{0.75}{mm} for the inner/outer plates, and less than $\pm$\SI{0.5}{mm} for the top/bottom plates.
+The deviation from the ideal location should not exceed $\pm$\SI{2}{mm} at any point~\cite{Grange:doc3632}, a specification that is important also for safe clearance from the NMR trolley.
+%% reference for these specs? This is apparently based on "the E821 and Bill?s calculation"
+
+
+%% Have paragraph on potential size of effect from misalignment?
+To give a scale of the potential effect, the size of the E-field correction can be expressed as~\cite{Fienberg:thesis}
+\begin{equation} \label{eq:Dwa_Wa}
+\frac{\Delta\omega_{\alpha}}{\omega_{\alpha}} = \frac{2 \beta^2 n (1-n)}{R_0^2} (\langle x_{eq}^2 \rangle + \langle x_{eq} \rangle \frac{h}{1-n}) ,
+\end{equation}
+where $\langle x_{eq} \rangle$ is the average offset of the equilibrium orbit from the center of the quadrupole potential, and $h$ is the displacement of the center of the quadrupole potential.
+Given the large offset of the equilibrium orbit in Run 1 of approximately \SI{5}{mm}, a \SI{1}{mm} displacement of the quadrupole plates can shift the correction by approximately \SI{20}{ppb}.
+An independent tracking study~\cite{Zhanibek:doc13939} finds roughly 10-\SI{25}{ppb} shift in the E-field correction per mm of quad displacement, confirming the size of the effect.
+Given the linear coupling with the offset in the equilibrium radius distribution, a 1 mm uncertainty in the quadrupole potential center would similarly contribute $\sim$\SI{20}{ppb} of uncertainty to the correction.
+Therefore sub-mm precision is desired in our knowledge of the plate location.
+
+
+
+
+
+
+
+

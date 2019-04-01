@@ -1,0 +1,93 @@
+\section{\label{sec:kicker_survey} Survey of kicker plates}
+\medskip
+
+
+As shown in Fig.~\ref{fig:VCNL_SensorData}, the dataset collected by the VCNL4010 sensors includes a survey of the kicker plates. 
+Fig.~\ref{fig:VCNL_data_kickers}~\cite{Kargiantoulakis:doc16976} focuses on the VCNL measurements around the region of the kickers, where the three main data islands correspond to the three kicker plates. The edges of the quadrupole plates Q1L and Q2S are also apparent.
+Note that we only use the data from the trolley moving downstream through the kickers. For each quad plate we had used data from two separate passes of the trolley, moving upstream and downstream. 
+But for the first pass through the kickers moving upstream, we were being careful and moving the trolley in small intervals to ensure that no interaction occurs between the sensors and the plates. As a result that data is now difficult to match with the exact azimuthal location that is being sampled, and will not be used.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{VCNL_data_kickers.png}
+	\caption{The raw data collected by the VCNL4010 sensors around the region of the kicker plates, plotted versus run time. 
+	}\label{fig:VCNL_data_kickers}
+\end{figure}
+
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{VCNL_kicker_plates.png}
+	\caption{The location of all three inner and outer kicker plates, plotted versus azimuth. Fits to the VCNL sensor data are shown as dashed lines for each plate. The solid black lines mark the ideal plate locations.
+	}\label{fig:VCNL_kicker_plates}
+\end{figure}
+
+
+
+The proximity distance measurement in Fig.~\ref{fig:VCNL_data_kickers} relies on the sensor calibration.
+As before we extract the trolley rails location from the existing AMD data, separately for each kicker plate.
+Finally we use the same "geometric factors" for the VCNL sensors that we extracted from fitting to the known quad plates, which yielded overall very good agreement between the VCNL measurement and other surveys.
+
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{VCNL_kicker_Dr.png}
+	\caption{The distance between inner and outer plates of the three kickers.
+	}\label{fig:VCNL_kicker_Dr}
+\end{figure}
+
+
+
+The location of the inner and outer kicker plates is plotted in Fig.~\ref{fig:VCNL_kicker_plates}.
+The ideal position of the plates is $\pm$\SI{47.5}{mm} from $r_0$=\SI{7112}{mm}, shown as a solid black line in the figure. 
+Fits for the average location over all three kickers are shown as dashed lines. It is evident that both plates are more inwards than designed, on average.
+
+
+
+The most inwards location of all outer plates is at the downstream end of K3. 
+It is then no surprise that the interaction with the outer sensor occurred there. It was unfortunate that the sensor fixture happened to be misaligned outwards in that run.
+The distance between opposite kicker plates is plotted in Fig.~\ref{fig:VCNL_kicker_Dr}.
+
+
+
+\begin{table}[h!]
+\begin{center}
+\caption{Average locations of kicker plates and offset from ideal. All values in mm. }
+\label{tab:kicker_survey}
+
+\begin{tabularx}{\textwidth}{>{\centering\arraybackslash}p{0.2\textwidth} Y | cc}  
+%\begin{tabularx}{\textwidth}{X|X X X p{1.3cm} p{1.45cm} p{1.45cm}}  
+
+     &      & \textbf{VCNL survey} & \textbf{Offset from design} \\ \hline
+ \multirow{ 3}{*}{\textbf{K1}}    &     Inner plate     &    7062.88    &    -1.62  \\ 
+				  &     Outer plate    &    7158.19    &  	-1.31 \\
+				  &     Out-In     &    95.36    & 	0.36 \\ \hline
+ \multirow{ 3}{*}{\textbf{K2}}    &     Inner plate     &    7064.61    & 	0.11  \\ 
+				  &     Outer plate    &    7157.77    &  	-1.73 \\
+				  &     Out-In     &    93.22    &  	-1.78 \\ \hline
+ \multirow{ 3}{*}{\textbf{K3}}    &     Inner plate     &    7061.61    & 	-2.89  \\ 
+				  &     Outer plate    &    7155.77    &  	-3.73 \\
+				  &     Out-In     &    94.27    & 	-0.73 \\ \hline
+ \multirow{ 3}{0.2\textwidth}{\centering \textbf{Average over{\newline} all plates}}    &     Inner plate     &    7063.03    & 	-1.47  \\ 
+				  &     Outer plate    &    7,157.24    & 	-2.26 \\
+				  &     Out-In     &    94.28    & 	-0.72 \\ 
+				  
+\end{tabularx}
+\end{center}
+\end{table}
+
+
+
+Values for plate locations and distance between plates averaged over all three kickers are listed in Table~\ref{tab:kicker_survey}.
+It confirms that the average plate locations are inwards by $\sim$\SI{2}{mm} relative to the design position. The distance between the plates is also smaller than designed. 
+These offsets from ideal are generally larger than we saw on the quad plates, where they are more tightly controlled. 
+The reason is that a stored muon may pass thousands of times through a field of a quad plate in a single fill, whereas it should be kicked only once, ideally. 
+Therefore alignment is a much less important consideration for the kicker system.
+
+
+
+
+
+
+

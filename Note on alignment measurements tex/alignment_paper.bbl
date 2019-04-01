@@ -1,0 +1,109 @@
+\providecommand{\noopsort}[1]{}\providecommand{\singleletter}[1]{#1}%
+\begin{thebibliography}{10}
+
+\bibitem{Semertzidis:2003zs}
+Y.~K. Semertzidis et~al.
+\newblock {The Brookhaven muon (g-2) storage ring high voltage quadrupoles}.
+\newblock {\em Nucl. Instrum. Meth.}, A503:458--484, 2003.
+
+\bibitem{Grange:2015fou}
+J.~Grange et~al.
+\newblock {Muon (g-2) Technical Design Report}.
+\newblock 2015.
+
+\bibitem{Grange:doc3632}
+J.~Grange and W.~Morse.
+\newblock {E989 Note 57: ES Quadrupole Specs vs N}.
+\newblock Muon g-2 DocDB-3632.
+
+\bibitem{Fienberg:thesis}
+A.~Fienberg.
+\newblock {\em {Measuring the Precession Frequency in the E989 Muon g-2
+  Experiment}}.
+\newblock PhD thesis, University of Washington, 2019.
+\newblock Muon g-2 DocDB-16264.
+
+\bibitem{Zhanibek:doc13939}
+O.~Zhanibek and Y.~K. Semertzidis.
+\newblock {E field correction uncertainties due to quad misalignment for FNAL
+  E989 Muon g-2 experiment}.
+
+\bibitem{Capacitec}
+Non-contact displacement {Capacitec} short form manual.
+\newblock
+  \url{http://www.process-controls.com/intertechnology/Capacitec/pdfs/ShortForm.pdf}.
+
+\bibitem{Wanwei:doc3709}
+W.~Wu et~al.
+\newblock {Using {Capacitec} to Investigate Quad Plate Alignment}.
+\newblock Muon g-2 DocDB-3709.
+
+\bibitem{Wanwei:doc8036}
+W.~Wu et~al.
+\newblock E989 note 116: Electrostatic quadrupoles: Plate alignment.
+\newblock Muon g-2 DocDB-8036.
+
+\bibitem{API}
+{API} {iProbe} 360.
+\newblock \url{https://apisensor.com/products/3d-laser-tracker-systems/i-360/}.
+
+\bibitem{Horst:doc5955}
+H.~Friedsam.
+\newblock {Alignment results 22Feb17}.
+\newblock Muon g-2 DocDB-5955.
+
+\bibitem{Kargiantoulakis:doc12906}
+M.~Kargiantoulakis.
+\newblock {Status of quad alignment studies}.
+\newblock Muon g-2 DocDB-12906.
+
+\bibitem{Grange:elog386}
+J.~Grange.
+\newblock Trolley alignment data from horst.
+\newblock Muon g-2 UW elog-386.
+
+\bibitem{Kargiantoulakis:doc14776}
+M.~Kargiantoulakis.
+\newblock {ESQ Keyence measurement update}.
+\newblock Muon g-2 DocDB-14776.
+
+\bibitem{Kargiantoulakis:doc15679}
+M.~Kargiantoulakis.
+\newblock {Quads survey through flange}.
+\newblock Muon g-2 DocDB-15679.
+
+\bibitem{VCNL4010}
+{{VCNL4010} Product Information from Vishay Semiconductors}.
+\newblock \url{https://www.vishay.com/optical-sensors/list/product-83462/}.
+
+\bibitem{Kargiantoulakis:doc14547}
+M.~Kargiantoulakis.
+\newblock {Quad alignment measurements update}.
+\newblock Muon g-2 DocDB-14547.
+
+\bibitem{Kargiantoulakis:doc14938}
+M.~Kargiantoulakis.
+\newblock {Trolley cable tension analysis for dropped components}.
+\newblock Muon g-2 DocDB-14938.
+
+\bibitem{Kargiantoulakis:doc15733}
+M.~Kargiantoulakis.
+\newblock {Quads survey from sensors mounted on trolley}.
+\newblock Muon g-2 DocDB-15733.
+
+\bibitem{Kargiantoulakis:doc16324}
+M.~Kargiantoulakis.
+\newblock {Location and uncertainty of ESQ plates}.
+\newblock Muon g-2 DocDB-16324.
+
+\bibitem{Nguyen:doc4586}
+H.~Nguyen.
+\newblock {Effect of Q1 Outer Mylar Waviness on Beam Dynamics}.
+\newblock Muon g-2 DocDB-4586.
+
+\bibitem{Kargiantoulakis:doc16976}
+M.~Kargiantoulakis.
+\newblock {Survey of kicker plates with proximity sensors on trolley}.
+\newblock Muon g-2 DocDB-16976.
+
+\end{thebibliography}

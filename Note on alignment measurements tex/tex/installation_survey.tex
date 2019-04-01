@@ -1,0 +1,55 @@
+\section{\label{sec:InstallationSurvey} Installation and survey}
+\medskip
+
+This section describes measurements and surveys of the electrodes location, with the plates mounted on the cage but before the cages were inserted into vacuum chambers.
+
+\subsection{\label{Capacitec} Capacitec and micrometer surveys}
+
+The initial survey of the quad plates position employed Capacitec~\cite{Capacitec} sensors with HPB button probes, non-contact and highly sensitive to displacements over a thin gap based on a capacitive measurement. 
+The probes are connected through cables to Series 4000 amplifying readout electronics. 
+The Capacitec sensors offered a very good solution for measuring plate location inside their cage, before the cage was installed in vacuum chambers. 
+The sensors were mounted on a trolley and sampled the plates' location.
+A relatively small range of linear operation was found within 0-3 mm, but that was enough for reliable measurement. 
+The initial survey is described in~\cite{Wanwei:doc3709}.
+Unfortunately, it looks like the Capacitec measurement is not fully stable and repeatable, so it was eventually abandoned.
+
+Based on the Capacitec measurements, some adjustments of the plates was attempted as they were mounted on the standoffs, to minimize deviations from their design location.
+The final alignment was achieved by using the micrometer tools designed by J. Grange and H. Nguyen. To slightly adjust the position locally, a half or full washer was added between the standoff and the plate.
+The procedures to align the plates during installation are described in~\cite{Wanwei:doc8036}
+
+
+
+\subsection{\label{sec:LaserScan} Laser alignment system survey before installation}
+
+After the plates were installed in the cages, as closely to their ideal position as possible, their position was determined by the Alignment and Metrology Department (AMD) using a handheld 3D laser scanning system, the API I-Scan II~\cite{API}.
+The system performs dynamic non-contact scanning of the plate surface, achieving 50-\SI{100}{{\micro}m} resolution.
+
+%% Add here a photo from the micrometer/capacitec measurements.
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{laser_scan_photo.png}
+	\caption{AMD measurement with the handheld laser scanning system.}
+	\label{fig:laser_scan_photo}
+\end{figure}
+
+Measurement with the laser scanner can be seen in Fig.~\ref{fig:laser_scan_photo}. 
+The plates surface outside the cage is sampled, then under assumption of constant and ideal plate thickness, the location of the inner surface is extracted. Tens or hundreds of thousands of points were scanned per plate, providing very detailed information of the plate surface.
+
+An example of data from a sampled plate is shown in Fig.~\ref{fig:Q4Si_BeforeVC}. The high-density blue data come from the laser scan, and the hand-held micrometer measurements are shown in red for comparison. The agreement is very good. 
+The vertical axis is distance in mm from the center of the storage ring. Note that the plates here are not installed inside a vacuum chamber and not yet located inside the ring. The AMD group used fiducial markers located onto the cage, and then expressed the laser scan measurements in storage ring coordinates under the assumption that the cage will be located in its ideal position. 
+The horizontal axis in the figure is length along the plate.
+The regions where the vertical RMS of the laser data grows suggest a tilt of the plate, \ie the plate's radial position varies from top to bottom.
+% Do the gaps correspond to standoffs? That would be a nice handle to compare to drawings.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{q4short_inner_BeforeVC.png}
+	\caption{Alignment data on the Q4S inner plate. Blue is from the AMD laser scan, red is from the hand-held micrometer tool.}\label{fig:Q4Si_BeforeVC}
+\end{figure}
+
+
+
+%In the previous quad plate alignment note~\cite{Wanwei:doc8036} and up to recently, the results of the laser scanning system were not examined in detail.	
+
+
+

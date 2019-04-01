@@ -1,0 +1,454 @@
+\section{\label{sec:upgrades} Upgrades}
+
+\subsection{\label{sec:pulsers} High Voltage Pulsers}
+\textcolor{orange}{Howard}
+\medskip
+
+If the storage ring field arrangement has $\vec{E}\times\vec{B}=\vec{0}$ everywhere, then there is no need to pulse the EQS. There are regions where $\vec{E}\times\vec{B}\neq\vec{0}$ in practice, and so trapped plasma accumulates~\cite{Semertzidis:2003zs}. Thus, HV pulses are applied to the quadrupoles: plates are held at voltage during the data collection period (\SI{\sim10}{} muon lab frame lifetimes, i.e. \SI{\sim700}{\micro\second}) and then they are discharged to ground so that plasma escapes the trapping regions.
+
+Figure~\ref{fig:bnl_hv_pulse_cirdia} shows a typical channel of the BNL HV pulser design~\cite{Semertzidis:2003zs}. A voltage switch design was tested for the BNL experiment, but the reliability of this 1990s technology was found to be insufficient. The BNL experiment instead used a thyratron (current switch) based design: the current switch is conducting (closed) when triggered and nonconducting (opened) when the current drops below threshold. The quadrupole plates were disconnected from the BNL HV sources during the data collection period. A quadrupole spark would cause a voltage drop on the plates, where this drop had an RC time constant that was \SI{\sim100}{\micro\second} when the current switch was open for the HV source and an RC time constant that was greater than \SI{100}{\micro\second} when this switch was closed.
+
+A voltage drop during data collection causes a systematic effect in the measurement of $a_{\mu}$, e.g. a uniform \SI{1}{\percent} voltage drop over \SI{700}{\micro\second} will cause a \SI{10}{ppb} shift in the measured value \textcolor{red}{\textit{[see Y. Orlov, g-2 note 440, not for publication]}}. The Fermilab experiment uses an IGBT based (voltage switch) design, see Fig.~\ref{fig:fnal_hv_pulse_cirdia}, which meets the reliability specification \textcolor{red}{\textit{[Howard et al. should check the $R$ and $C$ values, references, etc.]}}. The plate voltage cannot drop when the voltage switch is closed for the HV source, and this design actually leads to a \SI{0.1}{\percent} increase in plate voltage over \SI{700}{\micro\second}. The quadrupole plates are connected to the Fermilab HV sources during the data collection period, but the spark detection system, see Section~\ref{sec:sparkctrls}, discharges the plates to ground upon detecting a quadrupole spark.
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig02a.png}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig02a.png}
+		\caption{BNL HV pulser circuit diagram.}\label{fig:bnl_hv_pulse_cirdia}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig02b.png}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig02b.png}
+		\caption{Fermilab HV pulser circuit diagram.}\label{fig:fnal_hv_pulse_cirdia}
+	\end{subfigure}
+	\caption{\textcolor{orange}{Volodya} HV pulser circuit diagrams; HV pulses are applied to the quadrupole plates. \textcolor{red}{\textit{Bill draws great circuit diagrams, but we should probably use software generated diagrams.}}}\label{fig:hv_pulse_cirdia}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+The front view of a pulser rack is shown in Fig.~\ref{fig:pulser_front}.
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_6729.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_6729.jpeg}
+	\caption{Front view of a two-step pulser: power supplies (top) and the PLC control unit (bottom).}\label{fig:pulser_front}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+The back view of a pulser rack is shown in Fig.~\ref{fig:pulser_back}.
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_7196.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_7196.jpeg}
+	\caption{Back view of a two-step pulser: power supplies and PLC control unit (top), solid-state charge and discharge switches (upper middle), HV connections for cables that go to the HV feedthrough boxes (lower middle), and HV capacitors (bottom).}\label{fig:pulser_back}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+The side view of a pulser rack is shown in Fig.~\ref{fig:pulser_side}.
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_8655.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_8655.jpeg}
+	\caption{Side view of a one-step pulser: power supplies and PLC control unit (top), solid-state charge switch (upper middle), solid-state discharge switch (lower middle), and HV capacitor and voltage divider (bottom)}\label{fig:pulser_side}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+\subsection{\label{sec:sparkctrls} System Controls \& Spark Detection}
+\textcolor{orange}{Nam (system controls) \& Erik (spark detection)}
+\medskip
+
+The EQS uses CAMAC electronics for spark detection and NIM electronics for controlling the system timing (charges and discharges) during the Commissioning Run and \runone, see Fig.~\ref{fig:quad_rack}.
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_5906.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_5906.jpeg}
+	\caption{EQS electronics rack: computers (top), CAMAC spark detection electronics (upper middle), NIM timing electronics (lower middle), patch panel for capacitive sensor signal cables (bottom).}\label{fig:quad_rack}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+The pulser power supply voltages and currents are read out with LabJacks, see Fig.~\ref{fig:labjack}.
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_7370.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_7370.jpeg}
+	\caption{LabJacks, located on the back side of the EQS electronics rack, are used to read out the pulser power supply voltages and currents.}\label{fig:labjack}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+The Muon~\gmtwo~experiment implemented an optical trigger system during \runone~for transmitting triggers to different subsystem. Optical triggers sent to the EQS were converted into electrical signals at the electronics rack, see Fig.~\ref{fig:opt_trig}, as the EQS used NIM timing electronics during the Commissioning Run and \runone.
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_7482.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_7482.jpeg}
+	\caption{A converter box used to convert optical trigger signals into electrical signals for the EQS NIM timing electronics.}\label{fig:opt_trig}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+\medskip
+\textcolor{red}{\textit{What do we want to say about the BU electronics???}}
+\medskip
+
+The Fermilab experiment has developed a spark detection circuit based on capacitive voltage probes, see Figs.~\ref{fig:cap_probe_cirdia},~\ref{fig:hv_feedthrough_box}, and~\ref{fig:hv_feedthrough_box_top}. The voltage switch for the HV source is opened \SI{10}{\micro\second} after the detection of a spark, and then the voltage switch for the ground is closed \SI{50}{\micro\second} after closing the source switch \textcolor{red}{\textit{[Should double check these numbers]}}.
+
+\begin{figure*}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=2.00\columnwidth]{fig03.png}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=2.00\columnwidth]{fig03.png}
+	\caption{\textcolor{orange}{Volodya} Capacitive voltage probe circuit diagram; capacitive voltage probes are used for detecting quadrupole sparks. \textcolor{red}{\textit{This is a copy from a Word document. We should try and get the original image.}}}\label{fig:cap_probe_cirdia}
+\end{figure*}
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_7998.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_7998.jpeg}
+	\caption{A HV feedthrough box. The potted resistors connect to the feedthroughs (top) and the black HV cables that go to the pulsers (bottom). The capacitive sensor readout electronics are placed inside of a metal compartment to shield them from electronic noise, where the cover plate has been removed for the picture.}\label{fig:hv_feedthrough_box}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_8033.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_8033.jpeg}
+	\caption{A closeup view of the top of a HV feedthrough box that shows some of the capacitive voltage probes. Each probe is a metal ring that is placed around the top of a potted resistor.}\label{fig:hv_feedthrough_box_top}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+Figure~\ref{fig:spark_signal} \textcolor{red}{\textit{[a huge amount of information is in this figure, see doc-db 4405 (2016), not for publication]}} shows oscilloscope traces for a quadrupole spark, where this type of spark can be modeled as a discharge across a HV insulator. This discharge causes an intense release of de-sorbed gases, which move away from the insulator at a speed of \SI[per-mode=symbol]{\approx1}{\cm\per\micro\second}~\cite{AVDIENKO1977643}. Some of the de-sorbed gases will move into $\vec{E}\times\vec{B}\neq\vec{0}$ regions that accumulate trapped plasma~\cite{Semertzidis:2003zs}. In turn, some of these de-sorbed gases become ionized, which then initiates a plasma oscillation (glow discharge), e.g. see ~\cite{Jackson:1998nia}.
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig04.png}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig04.png}
+	\caption{\textcolor{orange}{Bill} Oscilloscope traces for a typical quadrupole spark: Ch1 (yellow) is a capacitive voltage probe (spark) signal, Ch2 (cyan) is a spark signal, Ch3 (magenta) is a positive pulser voltage, and Ch4 (green) is a negative pulser voltage. The pulser voltages are measured using a voltage divider with a conversion of \textcolor{red}{\textit{\SI{100}{\milli\volt} output per \SI{1}{\kilo\volt} input [Howard et al. check]. This is a copy from a Word document. We should try and get the original image.}}}\label{fig:spark_signal}
+\end{figure}
+
+\textcolor{red}{\textit{From doc-db 4405 (2016), not for publication:}}
+
+\textcolor{red}{\textit{During July 31, we ran with the magnetic field on, with both the positive and negative pulsers on. On July 31, the traces also show the voltage in the pulser cabinet (see Fig.~7). \SI{0.02}{\milli\second} after the spark is detected, the HV switch is opened. \SI{0.05}{\milli\second} after that, the ground switch is closed. The RC time constant after the HV switch is opened should be the cable capacitance of \SI{1}{\nano\farad} times \SI{24}{\kilo\ohm}, or \SI{24}{\micro\second}, if the effective discharge resistance is negligible compared to the \SI{24}{\kilo\ohm} resistor. From Fig.~6, the effective discharge resistance is not negligible before the ground switch is closed.}}
+
+\textcolor{red}{\textit{The type 3 trace in Fig.~7 shows a spark, then \SI{10}{\micro\second} later, we get the high frequency stuff, which comes and goes. Apparently, the spark spoils the vacuum, so we build up, and then quench, and then build up again, etc., a plasma oscillation. With only the negative pulser, we don't get the plasma oscillation. With only the positive pulser, we do. This is consistent with what we expect from the $\vec{E}\times\vec{B}$ trapped electron regions for positive muon polarity.}}
+
+\subsection{\label{sec:boxes} High Voltage Feedthrough Boxes}
+\textcolor{orange}{Volodya}
+\medskip
+
+The BNL HV feedthrough boxes were originally designed to use a \textcolor{red}{\textit{[what was the name of that fluorine compound???]}} gas system to suppress sparks inside of the boxes. The use of \textcolor{red}{\textit{[what was the name of that fluorine compound???]}} gas became impractical during the BNL experiment due to a change in US regulations, and so a change over to the use dry nitrogen gas was implemented. The Fermilab experiment instead uses a HV feedthrough box design that is meant to work in normal atmospheric conditions. This requires the use of potted HV resistors, see Figs.~\ref{fig:hv_feedthrough_box} and~\ref{fig:potted_resistors}, along with HV connectors that screw into place, see Figs.~\ref{fig:pulser_back},~\ref{fig:hv_feedthrough_box} and~\ref{fig:hv_feedthrough_box_top}, and the use of dielectric grease with the HV connectors, see Fig.~\ref{fig:hv_conn}.
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_9019.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_9019.jpeg}
+	\caption{Two types of potted resistors were used during the Commissioning Run and~\runone: chain of HVR resistors (left) and single Caddock resistor (right). Some of the potted resistors based on HVR resistors were found to be damaged after the completion of~\runone, see Section~\ref{sec:damaged_res}.}\label{fig:potted_resistors}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_8980.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_8980.jpeg}
+		\caption{A HV feedthrough connector that is attached to the end of a potted resistor cable.}\label{fig:hv_feedthrough_conn}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_8541.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_8541.jpeg}
+		\caption{A HV connector attached to the end of a cable that is used to connect a pulser to a potted resistor. The same type of HV connector is used on both ends of a cable.}\label{fig:hv_cable_conn}
+	\end{subfigure}
+	\caption{Dielectric grease is applied to the HV connectors to suppress sparks.}\label{fig:hv_conn}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+\subsection{\label{sec:exten} Quadrupole Extensions}
+\textcolor{orange}{Esra}
+\medskip
+
+The BNL experiment discovered that trapped low energy electrons, which are primarily from the ionization of residual gases, damage ceramic pieces on the vacuum side of the HV feedthroughs, which transfer HV to the quadrupole plates inside of the vacuum system, see Fig.~\ref{fig:hv_feedthrough_and_flange}. Trapped electrons drift in the $\vec{E}\times\vec{B}$ direction, following a path along the electrical leads that connect the plates to the feedthroughs, see Fig.~\ref{fig:no_extension}. The Fermilab experiment uses EQS extensions to displace the feedthroughs toward the storage ring center and away from the vacuum chambers that sit in the storage ring magnet gap. The HV feedthroughs now sit in a low $\vec{B}$ region that allows trapped electrons to escape to ground, see Fig.~\ref{fig:extension}.
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_2332.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_2332.jpeg}
+		\caption{The vacuum side of a HV feedthrough showing the ceramic piece that can be damaged by trapped electrons.}\label{fig:hv_feedthrough}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_5740.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_5740.jpeg}
+		\caption{A HV feedthrough being inserted into a HV feedthrough flange.}\label{fig:hv_feedthrough_insert}
+	\end{subfigure}
+	\caption{HV feedthroughs and HV feedthrough flanges.}\label{fig:hv_feedthrough_and_flange}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_1472.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_1472.jpeg}
+	\caption{Initial quadrupole testing configuration, which has the HV feedthrough flange connected to the vacuum chamber flange and the HV feedthrough box next to the storage ring magnet gap (left-side). This is the configuration that was used by the BNL experiment.}\label{fig:no_extension}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_5752.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_5752.jpeg}
+		\caption{A quadrupole extension without HV a feedthrough box; the 4 HV feedthroughs are at the end of the extension.}\label{fig:extension_no_box}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_5848.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_5848.jpeg}
+		\caption{A quadrupole extension with a HV feedthrough box.}\label{fig:extension_box}
+	\end{subfigure}
+	\caption{The quadrupole extensions place the HV feedthroughs in a low magnetic field region that helps limits damage from trapped electrons.}\label{fig:extension}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+A pair of Macor support plates were used for each quadrupole to provide mechanical support and electrical isolation for the leads, see Fig.~\ref{fig:two_batmen}. Each extension includes a T-piece with a window flange on top that allows for the visual inspection of the extension leads, see Figs.~\ref{fig:extension} and~\ref{fig:window}. The extension leads, see Fig.~\ref{fig:extension_leads}, were found to be vibrating due to quadrupole operations by using these windows, and so a third batman was added at the T-piece flange near the middle of the extension during the summer 2018 shutdown work for the \runtwo~operations.
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_5984.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_5984.jpeg}
+		\caption{A Macor support plate at the vacuum chamber-extension flange connection.}\label{fig:chamber_batman}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_8910.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_8910.jpeg}
+		\caption{A Macor support plate at the extension-HV feedthrough flange connection. Feedthrough leads have been inserted into the bottom extension leads for the picture.}\label{fig:extension_batman}
+	\end{subfigure}
+	\caption{Each quadrupole used 2 Macor support plates for the Commission Run and \runone.}\label{fig:two_batmen}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_7976.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_7976.jpeg}
+	\caption{A window flange on top of a T-piece that is part of a quadrupole extension. These window flanges allow for the visual inspection of the extension leads.}\label{fig:window}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+Each extension lead, see Fig.~\ref{fig:extension_leads}, is made from a single piece of aluminum tube with an aluminum metal jacket that has been press fitted into each end of the tube. The metal jackets are used to decrease the inner diameter at the ends, so as to provide electrical contacts for the plate and extension leads. The metal jackets have a rounded outer end that prevents them from slipping down into the tubes, see Figs.~\ref{fig:extension_batman} and~\ref{fig:in_situ_extension_leads}. The ends of the plate and HV feedthrough leads plug directly into the metal jackets, see Figs~\ref{fig:two_batmen} and~\ref{fig:r_test_leads}. The BNL HV feedthrough leads were replaced with newly designed feedthrough leads, see Fig.~\ref{fig:hv_feed_leads}, as the BNL leads are incompatible with the new HV feedthroughs.
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_4642.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_4642.jpeg}
+		\caption{Four-point resistance measurement of the electrical contacts between a feedthrough (left), extension (middle), and plate (right) lead.}\label{fig:r_test_leads}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_8470.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_8470.jpeg}
+		\caption{A set of in situ extension leads held in place by a pair of Macor support plates.}\label{fig:in_situ_extension_leads}
+	\end{subfigure}
+	\caption{Each quadrupole uses a set of 4 extension leads.}\label{fig:extension_leads}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{tikzpicture}
+		\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_7842.jpeg}};
+		\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+	\end{tikzpicture}
+	%\includegraphics[width=0.95\columnwidth]{fig-IMG_7842.jpeg}
+	\caption{HV feedthrough leads. A HV feedthrough pin plugs into a hole that is drilled into one side of the lead and the other side of the lead plugs into an extension lead.}\label{fig:hv_feed_leads}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+\subsection{\label{sec:mylar} Q1 Mylar Outer Plates \& Side Plate Vertical Standoffs}
+\textcolor{orange}{Hogan \& Jason}
+\medskip
+
+The muon beam passes through the Q1 long and short outer plates before being kicked onto the desired storage ring orbit, where the BNL experiment used specially thinned aluminum Q1 outer plates to reduce muon scatter. The BNL Q1 outer plates were modified and horizontal standoffs were replaced with vertical standoffs to further reduce muon scatter. The BNL Q1 outer plates had specially thinned plate regions at the center. These thinned regions were cut out, which left an aluminum plate frame, and then the removed aluminum plate material was replaced by attaching aluminized Mylar to the frame, see Fig.~\ref{fig:q1o_plate}. The muon scatter is further reduced by using Macor vertical standoffs with the Mylar Q1 outer plates, see Fig.~\ref{fig:vertical_standoffs}. These standoffs are designed to reduce the amount standoff mass seen by the injected muon beam.
+
+\medskip
+\textcolor{red}{\textit{Hogan needs to comment on his standoff gluing practices.}}
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_4701.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_4701.jpeg}
+		\caption{The Mylar Q1 outer plates were bent to the correct radius of curvature after the attachment of the aluminized Mylar to the aluminum frame.}\label{fig:bending_q1o_plate}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_4862.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_4862.jpeg}
+		\caption{Installation of a Mylar Q1 outer plate into a vacuum chamber cage.}\label{fig:install_q1o_plate}
+	\end{subfigure}
+	\caption{The Q1 outer plates are made from an aluminum frame and aluminized Mylar windows; the aluminum frames were made from BNL Q1 outer plates.}\label{fig:q1o_plate}
+\end{figure}
+
+\begin{figure}[]
+	\centering
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_7606.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_7606.jpeg}
+		\caption{Q1 outer plate Macor vertical standoffs. The vertical standoff edges were sanded down before installation to reduce the magnitude of the electric field generated by the standoffs, and thereby reducing the quadrupole spark rate.}\label{fig:preinstall_vertical_standoffs}
+	\end{subfigure}
+	%add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc (or a blank line to force the subfigure onto a new line).
+	\begin{subfigure}{\columnwidth}
+		\begin{tikzpicture}
+			\draw (0, 0) node[inner sep=0]{\includegraphics[width=0.95\columnwidth]{fig-IMG_4845.jpeg}};
+			\draw (0, 0) node[rotate=45,opacity=0.4]{{\fontsize{45}{54}\selectfont\textcolor{red}{\textbf{Preliminary}}}}; % rule of thumb: \fontsize{size}{1.2*size}
+		\end{tikzpicture}
+		%\includegraphics[width=0.95\columnwidth]{fig-IMG_4845.jpeg}
+		\caption{The vertical standoffs reduce the amount of standoff mass near the center plane of the plates, as compared to the BNL style horizontal outer plate standoffs.}\label{fig:in_situ_vertical_standoffs}
+	\end{subfigure}
+	\caption{Macor vertical standoffs give the Mylar Q1 outer plates mechanical support and electrical isolation.}\label{fig:vertical_standoffs}
+\end{figure}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}
+
+% dummy text for creating a reasonable figure layout.
+\textcolor{violet}{filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler filler}

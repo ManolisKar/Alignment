@@ -1,0 +1,168 @@
+\section{\label{sec:EQS_location_FromLaserScan} EQS location inside the storage ring}
+\medskip
+
+After installation and initial survey of the plates with respect to the cage, the cages were inserted to the vacuum chambers. 
+The AMD group surveyed the vacuum chambers and was able to express the EQS plates location in storage ring coordinates. The assumption is made that the cage remained perfectly rigid during insertion to the chamber. Then the existing laser scan data with respect to the cage can be expressed in real storage ring coordinates. 
+
+An initial survey was used to adjust the radial position of the vacuum chambers in order to optimize the location of the quad plates and bring them as close to ideal as possible. A vertical adjustment of the chambers was not possible, so only the radial location was optimized.
+After this corrective motion, the final survey of the chambers gives the location of the EQS plates. 
+Data from this survey can be found at~\cite{Horst:doc5955} and we will refer to it as the laser scan dataset. 
+Important details therein went without analysis for some time.
+We examine this rich dataset in this section.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{GlobalFit_TopQuads.png}
+	\caption{Screen capture from Horst's analysis. A global fit is performed of all 8 top plates around the ring to a single plane surface. Fit residuals are plotted here.}\label{fig:GlobalFit_TopQuads}
+\end{figure}
+
+
+
+\subsection{\label{sec:LaserScanGlobalAnalysis} Global analysis}
+
+
+In the global analysis of~\cite{Horst:doc5955} by Horst Friedsam, the head of the Alignment and Metrology Department, all 8 EQS plates of a given type (inner, outer, top, or bottom) were fit globally, including all Q1-Q4 regions around the ring. 
+The inner plates (and separately the outer) were fit globally to a single cylindrical surface. The top (and bottom) plates were fit globally to a plane surface.
+An example of such a fit is shown for the top plates at Fig.~\ref{fig:GlobalFit_TopQuads}.
+
+
+
+
+\begin{table}[]
+\begin{center}
+\caption{Global fit locations of EQS plates and offsets from ideal. All values in mm.}
+
+\begin{tabular}{p{2.5cm}|cccc}  
+ {} & \textbf{Global fit} & \textbf{Ideal value} & \textbf{Offset from ideal} & \textbf{RMS} \\ \hline
+ Top plate, \newline vertical location  &  \multirow{ 2}{*}{49.597} & \multirow{ 2}{*}{50} & \multirow{ 2}{*}{0.403} & \multirow{ 2}{*}{1.209}  \\ \hline
+ Bottom plate, \newline vertical location  &  \multirow{ 2}{*}{50.223} & \multirow{ 2}{*}{50} & \multirow{ 2}{*}{-0.223} & \multirow{ 2}{*}{1.140}  \\ \hline
+ Inner plate, \newline radial location  &  \multirow{ 2}{*}{7061.74} & \multirow{ 2}{*}{7062} & \multirow{ 2}{*}{0.26} & \multirow{ 2}{*}{0.77}  \\ \hline
+ Outer plate, \newline radial location  &  \multirow{ 2}{*}{7161.77} & \multirow{ 2}{*}{7162} & \multirow{ 2}{*}{0.231} & \multirow{ 2}{*}{1.11}  
+
+\end{tabular}
+\label{tab:GlobalFitLocations}
+\end{center}
+\end{table}
+
+
+
+The results from these global fits are given in Table~\ref{tab:GlobalFitLocations}.
+The average vertical location of the top and bottom plane surfaces are within \SI{0.4}{mm} from the design value. 
+The average radius of the global inner and outer cylindrical surfaces are within \SI{0.3}{mm} from ideal. 
+As noted in the original analysis, the RMS of the residuals of these global fits is significant. As can be seen from~\ref{fig:GlobalFit_TopQuads}, this is due to large residuals on individual plates. 
+To gain more insight, studies on individual plates are required.
+
+
+
+\subsection{\label{sec:IndividualPlates} Location of individual plates}
+
+Examining the data on individual plates, significant deviations from their ideal location are discovered, in many cases even outside specification~\cite{Kargiantoulakis:doc12906}.
+In Fig.~\ref{fig:Q1Sb_LaserScan} the AMD data on the bottom plate of the short Q1 quad are plotted 3-dimensionally. 
+A significant deviation from the ideal position is apparent, along with a non-linear azimuthal dependence of the vertical location. 
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{Q1Sb_LaserScan.png}
+	\caption{AMD data on the bottom plate of the short Q1 quad, plotted in 3 dimensions: vertical z, radial r, and azimuth. The ideal position of the plate is marked in blue at z=\SI{-0.05}{m}.}\label{fig:Q1Sb_LaserScan}
+\end{figure}
+
+%% Maybe add another 3d plot of an inner/outer plate here?
+Another visualization is given in Fig.~\ref{fig:Q1S_ColorCode}, again using the Q1 short plates as example. Here the plates are drawn in two dimensions, with color coding for the coordinate of most interest: vertical for the top and bottom plates, radial for the inner and outer. 
+The red bands next to the color code bars mark the regions that are outside the \SI{2}{mm} spec.
+Note the large radial variations on Q1 short outer plate. This is the plate constructed from aluminized Mylar. As the Mylar stretches it forms waves, and the laser scan provides a unique depiction of that. %would be good to have an earlier photo of the mylar plate to point back to
+The color-coded plots for all quads can be found in~\cite{Kargiantoulakis:doc12906}.
+
+\begin{figure}[t]
+	\centering
+	\includegraphics[width=\textwidth]{Q1S_ColorCode.png}
+	\caption{AMD data on all 4 Q1 short plates. 
+	The top two plots are radial location versus azimuth for the bottom and top plates, with the color-coding marking vertical location. 
+	The bottom two plots are vertical location versus azimuth for the inner and outer plates, with the color-coding marking radial location. 
+	In each case the color-coded coordinate is expressed in mm of deviation from the ideal position.}\label{fig:Q1S_ColorCode}
+\end{figure}
+
+
+Having noted some significant deviations from the \SI{2}{mm} requirement on some locations, as well as some azimuthal and vertical dependence which suggests a tilt in the plates, the average deviations of each plate from their ideal position are listed in Table~\ref{tab:AvgDeviations}.
+The cells marked in red have severe deviations from the specification of \SI{0.5}{mm} (\SI{0.75}{mm}) of average displacement per top/bottom (inner/outer) plate. 
+Those marked in yellow also exhibit concerningly large deviations. The rest are mostly within the specification, or not significantly outside it.
+
+\begin{table}[]
+\begin{center}
+\caption{Average radial and vertical deviations of quadrupole plates from their ideal position. All values in mm.}
+
+%\begin{tabular}{p{2.7cm}|c|c|c|c|c|c|c|c}  
+\begin{tabularx}{\textwidth}{p{2.7cm}|YYYYYYYY}  
+ & \textbf{Q1S} & \textbf{Q1L} & \textbf{Q2S} & \textbf{Q2L} & \textbf{Q3S} & \textbf{Q3L} & \textbf{Q4S} & \textbf{Q4L} \\ \hline
+ Bottom plate,{\newline}vertical deviation  &  \cellcolor{red}\multirow{ 2}{*}{2.05}  &  \cellcolor{yellow}\multirow{ 2}{*}{-0.84}  &  \multirow{ 2}{*}{-0.49}  &  \cellcolor{yellow}\multirow{ 2}{*}{0.67}  &  \cellcolor{yellow}\multirow{ 2}{*}{1.16}  &  \cellcolor{red}\multirow{ 2}{*}{-1.84}  &  \cellcolor{yellow}\multirow{ 2}{*}{-1.16}  &  \multirow{ 2}{*}{-0.44}  \\ \hline
+ Top plate,{\newline}vertical deviation  &  \cellcolor{red}\multirow{ 2}{*}{2.42}  &  \cellcolor{yellow}\multirow{ 2}{*}{-1.12}  &  \cellcolor{yellow}\multirow{ 2}{*}{-0.86}  &  \multirow{ 2}{*}{0.09}  &  \multirow{ 2}{*}{0.34}  &  \cellcolor{red}\multirow{ 2}{*}{-2.09}  &  \cellcolor{yellow}\multirow{ 2}{*}{-1.47}  &  \multirow{ 2}{*}{0.00}  \\ \hline
+ Inner plate, \newline radial deviation  &  \multirow{ 2}{*}{-0.59}  &  \multirow{ 2}{*}{-0.53}  &  \multirow{ 2}{*}{-0.70}  &  \multirow{ 2}{*}{0.06}  &  \multirow{ 2}{*}{-0.40}  &  \multirow{ 2}{*}{0.31}  &  \cellcolor{red}\multirow{ 2}{*}{1.85}  &  \multirow{ 2}{*}{0.20}  \\ \hline
+ Outer plate, \newline radial deviation  &  \multirow{ 2}{*}{-0.06}  &  \multirow{ 2}{*}{0.04}  &  \cellcolor{yellow}\multirow{ 2}{*}{-1.29}  &  \multirow{ 2}{*}{-0.13}  &  \multirow{ 2}{*}{0.00}  &  \multirow{ 2}{*}{-0.08}  &  \cellcolor{red}\multirow{ 2}{*}{2.24}  &  \multirow{ 2}{*}{-0.03}  \\ 
+\end{tabularx}
+\label{tab:AvgDeviations}
+\end{center}
+\end{table}
+
+
+The deviations tend to be of opposite sign on short and long plates of the same quad, especially on the top and bottom plates of Q1 and Q3. 
+This is also evident in more detail in Fig.~\ref{fig:GlobalFit_TopQuads}.
+A potential tilt of the installed cages or chambers that contain these quads could be the reason for this.
+The opposite deviations cancel and result in a small overall deviation of the top and bottom plates in the global fit, %ref to table with global fit results
+hence the global deviations are small even though they can be quite large on individual plates. 
+This also explains the large RMS of the global fits in Table~\ref{tab:GlobalFitLocations}.
+
+%% Have here a paragraph, noting that for the previous estimation of effect of misalignment on the E-field correction the relevant number is the global fit result. However the individual plates are also important, and show Mike Syphers' analysis of effect of individual plate displacement on orbit.
+
+% Perhaps move this paragraph to the Q4S section?
+Note that most significant deviations can be found on the top and bottom plates. That is because of the corrective radial motion of the vacuum chambers applied by the AMD group during installation. 
+The same correction was not possible to be made vertically.
+An exception are the inner and outer plates of quad Q4 short (Q4S), which have $\sim$\SI{2}{mm} average radial deviation from their ideal position. This is a much larger deviation than would be expected to survive after the radial corrective motion of the vacuum chambers.
+We will revisit and examine further the deviations on the Q4S inner and outer plates in Section~\ref{sec:Q4S_displacements}.
+The Q2S inner and outer plates are also out of spec, but not as extremely as Q4S.
+
+
+%% Add also subsection on the misalignment on the plane of the plates, ie radially for top/bottom and vertically for inner/outer.
+
+
+\paragraph{\label{sec:VacuumIncident} 02/2018 vacuum incident and repairs}
+% No reference found?
+
+On February 2018 a vacuum incident occurred, after which the Q1S and Q4S plates needed to be repaired and reinstalled.
+Therefore an important caveat to keep in mind is that the Q1S and Q4S locations from the laser scan dataset were only valid up to February 2018. 
+They cannot be directly compared to the in situ surveys that were performed later in 2018, and will be discussed in Section~\ref{sec:insitu_surveys}.
+
+
+
+
+\subsubsection{\label{sec:Q4S_displacements} Large Q4S inner and outer plate displacements}
+
+The corrective radial motion of the vacuum chambers was made specifically to null the radial deviations from the ideal position of the inner and outer plates. 
+Therefore the large deviations on these plates in Table~\ref{tab:AvgDeviations}, which can be $\sim$4 times the specified limit, should not exist. If they are real, then the corrective motion must have failed badly.
+
+The laser scan data from Fig.~\ref{fig:Q4Si_BeforeVC} reveal that the Q4S plates were very well aligned relative to the cage, before the cage was installed inside chamber 10. 
+We do not have any data on the alignment of the plates or cage relative to the vacuum chamber.
+We do however have data of the trolley rails inside the vacuum chambers, obtained from a separate AMD survey using ``fiducial'' laser reflector markers mounted on the trolley. The data in Fig.~\ref{fig:trolley_rails} are from the reconstructed position at the center of the trolley. 
+The dashed circles in the figure show the final location of the trolley rails if a corrective motion was applied to center radially the position of the Q2S and Q4S inner and outer plates. 
+
+The figure makes apparent that the trolley rails would be severely misplaced on the interface of chambers 9-10 and 10-11 if a corrective motion was applied to center the Q4S plates, creating potential problems for the operation of the trolley due to rail discontinuity. 
+Since the rails are fixed relative to the quad plates, the only adjustment possible would be on the adjacent bellows cages. In the past this procedure required several iterations and months before the trolley could operate without getting stuck at a rail discontinuity.
+A potential move of the chamber would also affect the location of the tracker detectors, the kicker plates, and beam collimators. The latter are especially important, as they have the strictest alignment requirement, $\sim$\SI{0.3}{mm}. Any move of the chamber would also require a careful alignment and survey of the final location of all these components.
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{trolley_rails.png}
+	\caption{Radial trolley rails position in all vacuum chambers around the ring, from an AMD survey. Ideal position at \SI{2}{mm} on the vertical axis. The solid circles mark the chambers with radially misaligned quad plates on Q2S and Q4S, chambers 4 and 10 respectively. The dashed circles show the location of the trolley rails after a potential corrective motion to bring the quad plates to their ideal position. Plot edited by Chris Polly based on data from~\cite{Grange:elog386}.
+	}\label{fig:trolley_rails}
+\end{figure}
+
+
+Finally, the good position of the trolley rails in chamber 10 suggests a potential explanation for the misplaced quad plates: that the corrective motion was performed to center the trolley rails instead of the quads, which would be a mistake. 
+This explanation requires a large misalignment of the trolley rails relative to the Q4S cage, which unfortunately cannot be tested.
+
+Of course the possibility always exists that there may have been an error in the calculation to express the location of the quad plates in storage ring coordinates.
+The only way to test this is through a survey of the quad plates as installed inside the chambers. 
+For this reason, two independent surveys were performed during the 2018 summer shutdown. They are described in the following section.
+
+
+
+

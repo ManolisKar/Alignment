@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: alignment_paper.aux
+The style file: unsrt.bst
+Database file #1: alignment_paper.bib
+Warning--empty journal in Grange:2015fou
+You've used 21 entries,
+            1791 wiz_defined-function locations,
+            543 strings with 6068 characters,
+and the built_in function-call counts, 2730 in all, are:
+= -- 207
+> -- 99
+< -- 0
++ -- 45
+- -- 24
+* -- 30
+:= -- 407
+add.period$ -- 60
+call.type$ -- 21
+change.case$ -- 20
+chr.to.int$ -- 0
+cite$ -- 22
+duplicate$ -- 114
+empty$ -- 373
+format.name$ -- 24
+if$ -- 640
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 2
+newline$ -- 106
+num.names$ -- 18
+pop$ -- 142
+preamble$ -- 2
+purify$ -- 0
+quote$ -- 0
+skip$ -- 79
+stack$ -- 0
+substring$ -- 21
+swap$ -- 20
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 1
+while$ -- 19
+width$ -- 23
+write$ -- 190
+(There was 1 warning)

@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1} Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2} Installation and survey}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1} Capacitec and micrometer surveys}{5}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2} Laser alignment system survey before installation}{5}{subsection.2.2}
+\contentsline {section}{\numberline {3} EQS location inside the storage ring}{6}{section.3}
+\contentsline {subsection}{\numberline {3.1} Global analysis}{7}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2} Location of individual plates}{9}{subsection.3.2}
+\contentsline {paragraph}{ 02/2018 vacuum incident and repairs}{11}{section*.12}
+\contentsline {subsubsection}{\numberline {3.2.1} Large Q4S inner and outer plate displacements}{11}{subsubsection.3.2.1}
+\contentsline {section}{\numberline {4} In situ surveys of quadrupole plates }{12}{section.4}
+\contentsline {subsection}{\numberline {4.1} Through-flange extension probe}{14}{subsection.4.1}
+\contentsline {subsubsection}{\numberline {4.1.1} Extension probe dataset}{16}{subsubsection.4.1.1}
+\contentsline {subsection}{\numberline {4.2} Proximity sensors mounted on the trolley}{21}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1} Scraping of sensors in vacuum region}{23}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2} The VCNL4010 dataset}{23}{subsubsection.4.2.2}
+\contentsline {section}{\numberline {5} Location and uncertainty of quadrupole plates }{31}{section.5}
+\contentsline {section}{\numberline {6} Conclusion}{33}{section.6}
+\contentsline {paragraph}{Acknowledgments}{33}{section*.35}
+\contentsline {section}{Appendices}{34}{section*.36}
+\contentsline {section}{\numberline {A} Survey of kicker plates}{34}{Appendix.1.A}

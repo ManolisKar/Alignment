@@ -1,0 +1,506 @@
+\section{\label{sec:insitu_surveys} In situ surveys of quadrupole plates }
+\medskip
+
+
+An effort to survey the EQS plates location in-situ was pursued over the 2018 shutdown.
+The motivation was three-fold:
+\begin{enumerate}
+\item Firstly, it was important to confirm or disprove the unexpectedly large deviations of the Q4S inner and outer plates deviations. If arising from a misplacement of their containing vacuum chamber 10, then a corrective action may need to be pursued.
+\item After the vacuum incident of February 2018, the position of the reinstalled Q1S and Q4S inner and outer plates was largely unknown, as the laser scan data does not apply anymore. A survey was necessary to get a handle on their location.
+\item Lastly, even for the remaining EQS plates where the laser scan data is good, we do not have a good estimation on the uncertainty of that data. For example, it is not easy to quote an uncertainty on the average plate locations quoted in Table~\ref{tab:AvgDeviations}. 
+Remember that translating the laser scan data to storage ring coordinates rests on the assumption that the plates remained stable and unperturbed when the cage was inserted in the vacuum chamber. That assumption is hard to constrain. Just as the plate location is an important input to systematic corrections to the $\omega_\alpha$ analysis, the uncertainty of their location is similarly an important input to the precision of these corrections. Therefore a survey to attempt to constrain that uncertainty is warranted.
+\end{enumerate}
+
+
+
+\begin{wrapfigure}{r}{0.6\textwidth}
+	\centering
+	\includegraphics[width=0.56\columnwidth]{Keyence_SensorHead.png}
+	\caption{The Keyence sensor head emits a laser beam and estimates distance from an object by detecting its reflection.
+	}\label{fig:Keyence_SensorHead}
+\end{wrapfigure}
+
+
+Performing in-situ surveys of the quad plates is quite challenging, mainly due to the difficulty of access to the plates from inside the storage region. 
+It is certainly impossible for the laser scanning system to sample from inside the storage region due to its bulk. Many other options considered have similarly forbidding high volume, either in the sensors or the accompanying cables and readout electronics. 
+For example the Capacitec sensors were initially considered, but the bulky readout electronics would have to remain outside the chamber and connected to the sensors over long cables, which would have to be carefully unspooled and collected through flanges as the trolley moves. 
+Other than very cumbersome, it is strongly preferred that such long cables are avoided since they could get caught on the plates, rails, or other components, and cause damage. Besides there were concerns with the reliability of measurements from the Capacitec probe.
+Any sensor that could be used inside the storage region must also have an operational range that matches the geometry, and achieve sub-mm precision to give a meaningful comparison to the existing data.
+
+
+An alternative is to sample externally through the flanges. This option however provides access only to the inner plate, and only to its face that is outside the storage region. 
+The access through flanges is also extremely limited azimuthally.
+Finally, any distance measurement should be performed without any contact to the plates, or at least with very careful and slight contact, as to avoid bending and modifying the plates.
+
+Two completely independent in-situ measurements were developed and performed during the 2018 shutdown, overcoming the challenging limitations. They are described in this section.
+
+
+
+
+\subsection{\label{sec:ExtensionProbe} Through-flange extension probe}
+
+The first measurement aims to use a high-precision sensor to estimate the uncertainty of the laser scan data. Working together with the AMD group, we selected the Keyence LC-2220 optical displacement sensor for our measurement.
+The Keyence system utilizes a \SI{670}{nm} wavelength semiconductor laser to achieve \SI{}{{\micro}m}-level resolution. The sensor head is shown in Fig.~\ref{fig:Keyence_SensorHead}.
+%% Have Keyence description and cite here.
+
+The sensor is connected through a cable to a bulky laser head, control and readout unit, so it was not feasible to measure from inside the storage region. This probe is meant to survey the EQS plates through flanges. 
+The disadvantage of this choice, as mentioned above, is that we only get access to the inner side of the inner plate and only over a small azimuthal range. 
+An advantage is that the measurement can be translated to storage ring coordinates by correlating each surveyed location to laser finder markers placed in known positions around the ring. 
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{FlangeMountingFixture.png}
+	\caption{Left: The design for the fixture that will mount on a flange and hold the Keyence sensor. Right: The fixture after machining and assembly.
+	}\label{fig:FlangeMountingFixture}
+\end{figure}
+
+
+Another consideration is that the Keyence sensor has a small linear operating range of ~\SI{3}{mm} and has to be placed ~\SI{30}{mm} away from the object. 
+A fixture was designed to mount on a flange, with an extension bar to bring the Keyence sensor to about \SI{30}{mm} from the inner quad plate. The fixture is shown in Fig.~\ref{fig:FlangeMountingFixture}.
+The extension was designed to be adjustable to allow for variations, but the AMD group decided to keep the extension length fixed to simplify calibration of the probe. This choice however meant that the distance between the flange and the plate had to be constant, which allowed us to use only one flange per quad plate (with design distance of \SI{31}{cm} between the flange and the quad plate), narrowing the azimuthal coverage even further. % In principle two flanges were available on long quads, but we only used one on each plate.
+To partially make up for that, the mounting of the fixture onto the flange was also adjustable to allow multiple measurement points per flange.
+Finally on the back of the fixture a plate was installed where the fiducial markers will be fitted.
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.8\columnwidth]{Keyence_mounted_fixture.png}
+	\caption{The fixture mounted on a flange, with the Keyence sensor head (unseen) at the edge of the extension bar sampling a quadrupole plate, connected through a cable to the laser head. Fiducial markers are fixed on the back-plate, each identified by a letter.
+	}\label{fig:Keyence_mounted_fixture}
+\end{figure}
+
+
+The Keyence sensor was calibrated using a precision translation stage and calipers to confirm the real distance from the object.
+The sensor's reading versus the actual distance is shown in Fig.~\ref{fig:Keyence_calibration}. The reading is shown to be very repeatable over multiple passes, after powercycling, and with multiple objects.
+However, outside the linear operating range of 30 $\pm$ \SI{3}{mm}, the reading initially switches to "NEAR" or "FAR", but upon going out further we get back a reading of distance again. 
+We suspect that this reading may arise from reflections inside the sensor head. 
+This is concerning, as in principle we are not able to distinguish whether a reading of \eg \SI{-0.8}{mm} is from the linear region or arising from reflections, without further information.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{Keyence_calibration.png}
+	\caption{Calibration of the Keyence sensor. The sensor is very repeatable, but has a limited linear range.
+	}\label{fig:Keyence_calibration}
+\end{figure}
+
+
+A first attempt to survey the plates with the Keyence sensor gave some confusing results, partly due to the uncertainty in the sensor's calibration~\cite{Kargiantoulakis:doc14776}.
+It was desirable that an independent measurement with a different probe could be mounted on the same fixture, preferably measuring concurrently, to remove any ambiguity from the Keyence sensor.
+The confirmation probe does not need to have the same high precision as Keyence.
+To that end, a manually controlled extension rod that samples the plate by contact, was installed and could be operated concurrently with Keyence. The contact should be as soft as possible to avoid any impact on the plate's position.
+The precision achieved should be better than \SI{1}{mm}, good enough to confirm the Keyence measurement with completely independent systematics.
+
+
+
+\subsubsection{\label{Keyence_data} Extension probe dataset}
+
+The fixture with the Keyence sensor and the extension rod was used to sample 6 out of the 8 quadrupole plates on 12/13/2018~\cite{Kargiantoulakis:doc15679}. The remaining 2 plates were not sampled as the required flange was occupied on their containing chamber. 
+One of the plates not sampled on that day was Q4S, but we have data on that plate from a previous iteration of the measurement only with the Keyence probe.
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{Keyence_AMD.png}
+	\caption{The AMD group is fitting the location of the fixture with a laser finder system. Meanwhile the Keyence sensor, with its head mounted on the fixture's extension, reads a distance of \SI{2.1580}{mm} from the quad plate.
+	}\label{fig:Keyence_AMD}
+\end{figure}
+
+
+A group from AMD came to correlate the position of the fixture to known fiducial markers around the ring.
+The fixture holding the two probes is mounted on the lone open flange, respecting the requirement that only one flange can be open at a time to prevent significant vacuum contamination. 
+The Keyence sensor samples the inner face of the inner quad plate and gives a distance reading. 
+Then a person from the AMD group softly pushes on the extension rod until contact is made with the plate. 
+We can see the Keyence distance reading increase by $\sim$\SI{0.2}{mm} with the rod pushing on the plate. The operator then slightly pulls back the rod. Unfortunately, we found afterwards that the operator pulled until the Keyence reading returned to the original value, although a small offset should have been allowed to verify contact. 
+
+Based on pre-calibration on the rod, we can immediately confirm that the Keyence sensor is within its linear range of operation.
+With both probes in place, the laser finder system locates the fiducial markers on the back of the fixture.
+We repeat the procedure by repositioning the fixture on the flange for one more measurement, and then move on to another flange.
+
+
+%\begin{longtable}[t]{p{0.1\textwidth} | p{0.15\textwidth} p{0.1\textwidth} p{0.13\textwidth} p{1.3cm} p{1.45cm} p{1.45cm}}  
+%% \begin{longtable}{X|X X X p{1.3cm} p{1.45cm} p{1.45cm}}  
+\begin{table}[]
+\begin{center}
+\caption{Survey data from the Keyence and extension rod probes, and comparison to the laser scan data. }
+\label{tab:Keyence_data}
+
+\begin{tabularx}{\textwidth}{X |Y Y Y >{\centering\arraybackslash}p{1.3cm} >{\centering\arraybackslash}p{1.45cm} >{\centering\arraybackslash}p{1.45cm}}  
+%\begin{tabularx}{\textwidth}{X|X X X p{1.3cm} p{1.45cm} p{1.45cm}}  
+
+ \multirow{ 3}{*}{{}} & \multirow{ 3}{*}{\textbf{R (mm)}} & \multirow{ 3}{*}{\textbf{Theta}} & \multirow{ 3}{*}{\textbf{Z (mm)}} & \textbf{Diff. Rod- {\newline}Keyence} & \textbf{Diff. to{\newline} laser scan} & \textbf{Avg diff{\newline} per plate} \\ \hline
+ Keyence,{\newline} Q1Sa   &  \multirow{ 2}{*}{7061.804} & \multirow{ 2}{*}{-40.231} & \multirow{ 2}{*}{17.524} &  & \multirow{ 2}{*}{0.816} &  \\ 
+ Rod,{\newline} Q1Sa          &  \multirow{ 2}{*}{7061.580} & \multirow{ 2}{*}{-40.358} & \multirow{ 2}{*}{11.757} & \multirow{ 2}{*}{0.2}  & \multirow{ 2}{*}{0.470} &  \\ 
+ Keyence,{\newline} Q1Sb   &  \multirow{ 2}{*}{7061.882} & \multirow{ 2}{*}{-40.134} & \multirow{ 2}{*}{17.528} &  & \multirow{ 2}{*}{0.912} &  \\ 
+ Rod,{\newline} Q1Sb          &  \multirow{ 2}{*}{7061.743} & \multirow{ 2}{*}{-40.260} & \multirow{ 2}{*}{11.784} & \multirow{ 2}{*}{0.1}  & \multirow{ 2}{*}{0.627} & \multirow{ 2}{*}{0.706}   \\ \hline
+
+ Keyence,{\newline} Q1La   &  \multirow{ 2}{*}{7061.903} & \multirow{ 2}{*}{-70.167} & \multirow{ 2}{*}{16.591} &  & \multirow{ 2}{*}{0.632} &  \\ 
+ Rod,{\newline} Q1La           &  \multirow{ 2}{*}{7061.730} & \multirow{ 2}{*}{-70.295} & \multirow{ 2}{*}{10.674} & \multirow{ 2}{*}{0.2}  & \multirow{ 2}{*}{0.531} &  \\ 
+ Keyence,{\newline} Q1Lb   &  \multirow{ 2}{*}{7061.664} & \multirow{ 2}{*}{-70.224} & \multirow{ 2}{*}{16.706} &  & \multirow{ 2}{*}{0.382} &  \\ 
+ Rod,{\newline} Q1Lb          &  \multirow{ 2}{*}{7061.459} & \multirow{ 2}{*}{-70.351} & \multirow{ 2}{*}{10.888} & \multirow{ 2}{*}{0.2}  & \multirow{ 2}{*}{0.174} & \multirow{ 2}{*}{0.430}   \\  \hline
+
+ Keyence,{\newline} Q2Sa   &  \multirow{ 2}{*}{7061.764} & \multirow{ 2}{*}{-130.236} & \multirow{ 2}{*}{2.828} &  & \multirow{ 2}{*}{0.569} &  \\ 
+ Rod,{\newline} Q2Sa           &  \multirow{ 2}{*}{7061.257} & \multirow{ 2}{*}{-130.365} & \multirow{ 2}{*}{-3.206} & \multirow{ 2}{*}{0.5}  & \multirow{ 2}{*}{0.251} &  \\ 
+ Keyence,{\newline} Q2Sb   &  \multirow{ 2}{*}{7061.703} & \multirow{ 2}{*}{-130.104} & \multirow{ 2}{*}{2.737} &  & \multirow{ 2}{*}{0.585} &  \\ 
+ Rod,{\newline} Q2Sb          &  \multirow{ 2}{*}{7061.287} & \multirow{ 2}{*}{-130.233} & \multirow{ 2}{*}{-3.275} & \multirow{ 2}{*}{0.4}  & \multirow{ 2}{*}{0.403} & \multirow{ 2}{*}{0.452}   \\  \hline
+
+ Keyence,{\newline} Q2La   &  \multirow{ 2}{*}{7062.036} & \multirow{ 2}{*}{-160.230} & \multirow{ 2}{*}{17.338} &  & \multirow{ 2}{*}{-0.128} &  \\ 
+ Rod,{\newline} Q2La           &  \multirow{ 2}{*}{7061.790} & \multirow{ 2}{*}{-160.359} & \multirow{ 2}{*}{11.411} & \multirow{ 2}{*}{0.2}  & \multirow{ 2}{*}{-0.411} &  \\ 
+ Keyence,{\newline} Q2Lb   &  \multirow{ 2}{*}{7062.054} & \multirow{ 2}{*}{-160.127} & \multirow{ 2}{*}{17.009} &  & \multirow{ 2}{*}{-0.118} &  \\ 
+ Rod,{\newline} Q2Lb          &  \multirow{ 2}{*}{7061.743} & \multirow{ 2}{*}{-160.255} & \multirow{ 2}{*}{11.220} & \multirow{ 2}{*}{0.3}  & \multirow{ 2}{*}{-0.461} & \multirow{ 2}{*}{-0.280}   \\  \hline
+ \multicolumn{7}{l}{(cont'd)}\\
+
+\end{tabularx}
+\end{center}
+\end{table}
+
+\begin{table}[t]
+\begin{center}
+\begin{tabularx}{\textwidth}{X|Y Y Y >{\centering\arraybackslash}p{1.3cm} >{\centering\arraybackslash}p{1.45cm} >{\centering\arraybackslash}p{1.45cm}}  
+ \multicolumn{7}{l}{(cont'd)}\\
+ \multirow{ 3}{*}{{}} & \multirow{ 3}{*}{\textbf{R (mm)}} & \multirow{ 3}{*}{\textbf{Theta}} & \multirow{ 3}{*}{\textbf{Z (mm)}} & \textbf{Diff. Rod- {\newline}Keyence} & \textbf{Diff. to{\newline} laser scan} & \textbf{Avg diff{\newline} per plate} \\ \hline
+
+ Keyence,{\newline} Q3La   &  \multirow{ 2}{*}{7061.238} & \multirow{ 2}{*}{109.891} & \multirow{ 2}{*}{16.856} &  & \multirow{ 2}{*}{0.364} &  \\ 
+ Rod,{\newline} Q3La           &  \multirow{ 2}{*}{7061.000} & \multirow{ 2}{*}{109.762} & \multirow{ 2}{*}{11.017} & \multirow{ 2}{*}{0.2}  & \multirow{ 2}{*}{-0.129} &  \\ 
+ Keyence,{\newline} Q3Lb   &  \multirow{ 2}{*}{7061.093} & \multirow{ 2}{*}{109.794} & \multirow{ 2}{*}{16.959} &  & \multirow{ 2}{*}{0.221} &  \\ 
+ Rod,{\newline} Q3Lb          &  \multirow{ 2}{*}{7060.971} & \multirow{ 2}{*}{109.666} & \multirow{ 2}{*}{11.172} & \multirow{ 2}{*}{0.1}  & \multirow{ 2}{*}{-0.171} & \multirow{ 2}{*}{0.072}   \\  \hline
+
+ Keyence,{\newline} Q4Sa   &  \multirow{ 2}{*}{7061.043} & \multirow{ 2}{*}{49.735} & \multirow{ 2}{*}{-4.003} &  & \multirow{ 2}{*}{2.777} &  \\ 
+ Keyence,{\newline} Q4Sb   &  \multirow{ 2}{*}{7061.100} & \multirow{ 2}{*}{49.920} & \multirow{ 2}{*}{-4.109} &  & \multirow{ 2}{*}{2.780} &  \multirow{ 2}{*}{2.778}   \\  \hline
+
+
+ Keyence,{\newline} Q4La   &  \multirow{ 2}{*}{7063.608} & \multirow{ 2}{*}{19.885} & \multirow{ 2}{*}{16.658} &  & \multirow{ 2}{*}{-0.149} &  \\ 
+ Rod,{\newline} Q4La           &  \multirow{ 2}{*}{7062.723} & \multirow{ 2}{*}{19.758} & \multirow{ 2}{*}{10.887} & \multirow{ 2}{*}{0.9}  & \multirow{ 2}{*}{-1.048} &  \\ 
+ Keyence,{\newline} Q4Lb   &  \multirow{ 2}{*}{7063.644} & \multirow{ 2}{*}{19.825} & \multirow{ 2}{*}{16.685} &  & \multirow{ 2}{*}{-0.056} &  \\ 
+ Rod,{\newline} Q4Lb          &  \multirow{ 2}{*}{7063.587} & \multirow{ 2}{*}{19.698} & \multirow{ 2}{*}{10.964} & \multirow{ 2}{*}{0.1}  & \multirow{ 2}{*}{-0.202} & \multirow{ 2}{*}{-0.364}   \\  
+
+\end{tabularx}
+\end{center}
+\end{table}
+
+
+
+
+All results are listed in Table~\ref{tab:Keyence_data}.
+There were two measurement locations per quad half-segment, \ie two different mounts of the fixture on the flange, marked as $a$ and $b$ in the table. 
+The variation in [Theta,Z] location is usually very small between these two measurements, and so is the extracted R. But it is still good practice to sample at least twice on each plate.
+For each of the two locations, both Keyence and the extension rod give a measurement of the radial location of the plate. This is expressed as the radial location of the muon-side surface of the inner plate, under the assumption of a constant ideal plate thickness. The points sampled by the two probes are generally separated by approximately 0.13\degree azimuthally and \SI{6}{mm} vertically.
+
+Looking at the difference between the Keyence sensor and the contact rod, it is good to observe that it is generally smaller than \SI{0.5}{mm}. That is a good confirmation that both independent measurements are reliable, given also that a small variation might be expected from the small offset in the points surveyed from the two probes.
+However, the difference between them is always positive, meaning that Keyence always gives a higher radial location than the rod on the same measurement. This is very likely a systematic error on the result from the contact rod based on the measurement procedure described previously, which means that the rod may not make perfect contact with the plate. 
+This is also likely the reason for the biggest discrepancy of \SI{0.9}{mm} between the two probes on measurement VC11a. Given the method of manually pulling back, such a large systematic error could be possible. Notice also that the rod measurement Q4Lb is in good agreement with Keyence on that location, even though variation between the two measurements on the same flange from the same probe is generally within \SI{0.2}{mm}.
+Therefore we have a reasonable and probable explanation for that largest discrepancy.
+
+On the difference to the laser scan data, the results on plate Q4S stand out immediately due to the high discrepancy of $\sim$\SI{2.8}{mm}. As noted earlier the measurements on that plate were performed before the extension rod was also mounted on the fixture.
+It is clear however that the in situ survey does not support the large misalignment suggested by the laser scan. If anything the radius is found to be smaller than ideal, but it is hard to make that statement having only sampled a small azimuthal range.
+Given that such a large offset would be difficult to explain from modifications during re-installation of the plate, the leading explanation currently is that there may have been a calculation error in the estimation from the laser scan dataset.
+
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.9\columnwidth]{Q4L_scan_probes.png}
+	\caption{Radial position versus azimuth for the Q4L inner plate from the laser scan data. The azimuthal range sampled by the probes through a flange is contained within the blue box.
+	}\label{fig:Q4L_scan_probes}
+\end{figure}
+
+
+
+On all other plates, it is very good to observe that all individual measurements from both probes have a difference smaller than \SI{1}{mm} from the laser scan expectation, calculated around the same ($\uptheta$,z) coordinates.
+The one exception is the rod measurement Q4La, but we have already established that this is probably due to the rod not being in good contact with the plate. In fact the sign of the discrepancy is consistent with that explanation, and all other measurements on that plate are in very good agreement.
+The differences are larger on the Q1S plate, but this is the reinstalled plate so we do not expect the laser scan data to be valid there anymore. 
+
+Finally on the last column we give the average difference between the direct in-situ surveys and the laser scan expectation. 
+With the exception of the Q1S plate where the comparison is not meaningful, the average difference per plate is always smaller than \SI{0.5}{mm}. That is very good agreement, and a very good indication for the size of uncertainty in the laser scan dataset.
+
+It may be noted that the radial position sampled on Q4L is rather far from the design \SI{7062}{mm}, almost by \SI{2}{mm}, while the average radial deviation from Table~\ref{tab:AvgDeviations} was only \SI{0.2}{mm} on that plate.
+The explanation for this is shown in Fig.~\ref{fig:Q4L_scan_probes}. Within the range sampled by the in-situ surveys the deviation from ideal happens to be large, even though the average is in good agreement.
+This figure also illustrates the small azimuthal range of the plate sampled by the Keyence and extension rod.
+The in-situ survey discussed in the following section covers the entire azimuthal range of each plate, and is therefore very valuable.
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{\label{sec:ProximitySensors} Proximity sensors mounted on the trolley}
+
+
+An alternative ambitious idea to sample the quad plates from inside the storage region, using proximity sensors mounted on the field trolley, is presented in this section.
+The main motivation for this was to get enough data to extract an average location for the unknown Q1S and Q4S plates. This would be impossible to get with just a measurement through flanges due to the limited azimuthal coverage and the potential for significant azimuthal variation on the plate location.
+But the hope was that this measurement could achieve good enough precision to be meaningful in the estimation of the laser scan data uncertainty.
+
+
+\begin{wrapfigure}{rt}{0.6\textwidth}
+	\centering
+	\includegraphics[width=0.56\columnwidth]{VCNL4010_chip.png}
+	\caption{The VCNL4010 proximity sensor chip.
+	}\label{fig:VCNL4010_chip}
+\end{wrapfigure}
+
+
+The proximity sensors selected based on these requirements are the VCNL4010 from Vishay Semiconductors~\cite{VCNL4010}. 
+The VCNL4010 proximity sensor is a fully integrated infrared emitter and PIN photodiode at a matched wavelength, with 16-bit ADC resolution.
+The chip also includes an ambient light sensor which was not used. The proximity measurement is nicely independent of ambient light by modulating the infrared signal. 
+
+The chip is controlled via I$^2$C interface from a Raspberry Pi (Rpi) board. 
+Because we need to operate two VCNL4010 chips concurrently, and since the chips have the same immutable slave address, the second I$^2$C bus of the Rpi was activated and the two chips were controlled over separate buses.
+The \SI{5}{V} input to the Rpi can be provided by a \SI{4000}{mAh} battery with a lifetime of a few hours, so the entire measurement can be made autonomous and independent of cables and any device outside the chambers.
+
+An important requirement is that the sensors must be able to perform the measurement from at least \SI{5}{mm} from the object, as there are locations in the ring where the radial clearance is more snug than inside the quad plates, which are \SI{100}{mm} radially apart.
+One such region is at the kicker plates, which have only $\sim$\SI{94}{mm} radial clearance. Another is at the inflector entrance, which probably allows the smallest clearance on the outer side relative to the center of the storage region, about \SI{46}{mm}.
+Therefore the sensors must be able to measure from a distance, in order to be mounted on the trolley and safely pass through these snug regions. The trolley itself has a \SI{90}{mm} diameter and it has often been difficult to operate without interference with the kicker plates.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{Rpi_trolley.png}
+	\caption{The fixture with the Raspberry Pi, proximity sensors, and battery, mounted on the trolley, as seen through the trolley garage.
+	}\label{fig:Rpi_trolley}
+\end{figure}
+
+
+Based on this a fixture was designed to bring them close enough to the plates for a precision measurement. 
+Two VCNL4010 sensors were placed opposite each other to sample the inner and outer plates concurrently. 
+They were mounted on a bar with a radial extent designed to place the sensors on a distance from the quad plates which balances precision and safety. 
+The fixture must be mounted on the vertical surface of the trolley, which is circular with \SI{90}{mm} diameter, using nothing but tape. Tests were performed to ensure that the fixture can be mounted safely, as a fall of the fixture inside the vacuum chambers could be dangerous. 
+Furthermore, the fixture could only be mounted through the trolley garage after the trolley was already on its rails. Mounting sideways and from a significant distance made centering of the fixture onto the trolley's vertical surface quite challenging at the mm-level. 
+
+
+%% Add somewhere a comment that survey of the top/bottom plates would also be possible.
+
+
+\subsubsection{\label{sec:VCNL_interaction_kickers} Scraping of sensors in vacuum region}
+
+
+On a first iteration of the VCNL4010 measurement from the trolley, upon retrieving the fixture it was discovered that the sensor sampling the outer plates had scraped somewhere inside the vacuum region and had dropped 3 small surface mount components (Fig.~\ref{fig:VCNL_DroppedComponents}).
+
+
+The interaction was not immediately detected, as the Rpi could not be read-out while inside the vacuum chamber. 
+Wireless ssh connection with the Rpi was forbidden by the Fermilab network, and an attempt to upload the data to a remote repository failed as wireless connection inside the chambers was unreliable. 
+It was thought that any interaction of the sensors would induce enough tension on the trolley pulling cables to trip the trolley motion, but this was not the case. 
+The reason for the interaction in the first place was that the difficulty of centering the fixture on the trolley surface was underestimated, resulting in significant placement offset towards larger radii.
+As we will see in Appendix~\ref{sec:kicker_survey} we were unlucky in the direction of this offset, as the kickers are misaligned inwards by up to a few mm.
+
+We should have been much better prepared and made sure that all precautions were in place to avoid any such interaction in the vacuum region.
+In the following section we list the lessons learned and all the improvements that were made to repeat the measurement successfully.
+
+
+
+\begin{wrapfigure}{r}{0.6\textwidth}
+	\centering
+	\includegraphics[width=0.56\columnwidth]{VCNL_DroppedComponents.png}
+	\caption{The VCNL4010 chip after interaction. Surface mount components scraped and dropped inside the vacuum chambers. 
+	}\label{fig:VCNL_DroppedComponents}
+\end{wrapfigure}
+
+
+The biggest concern with the dropped components was a potential perturbation to the magnetic field inside the storage region, as they were all ferromagnetic. 
+Even if small, it was concerning that the perturbation would probably be different every time the magnet cycles and the components move. 
+Fortunately we were able to predict that the interaction probably occurred near the downstream end of kicker plates K3, through an analysis of the VCNL4010 sensors data before the interaction~\cite{Kargiantoulakis:doc14547}, and through a comparison of the trolley cables tension to baseline runs without the sensors~\cite{Kargiantoulakis:doc14938}.
+
+
+
+
+
+\subsubsection{\label{sec:VCNL_data} The VCNL4010 dataset}
+
+
+Several lessons were learned from the incident of the sensors scraping inside the vacuum region, and improvements were made in the measurement design to prevent similar failures from happening again.
+\begin{enumerate}
+\item \textbf{Radial extent of sensors}. Based on the sensors' calibration (shown in Fig.~\ref{fig:VCNL_calibration}) they could be placed a few mm further from the quad plates and still achieve adequate precision. Therefore the radial extent of the bar was reduced from 80 down to $\sim$~\SI{74}{mm}, designed to place each sensor $\sim$~\SI{10}{mm} from the quad plates (the sensors also have \SI{3}{mm} thickness) and increasing the allowance for an offset of the fixture's placement.
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{VCNL_calibration.png}
+	\caption{Calibration for one of the VCNL4010 sensors. The dataset contains two separate measurements to ensure reproducibility. The sensor reading changes more rapidly at a distance of \SI{7}{mm} compared to \SI{10}{mm}, so increasing the distance between the sensors and the sampled plates for safety reasons came with a loss in resolution.
+	}\label{fig:VCNL_calibration}
+\end{figure}
+
+
+\item \textbf{Centering of fixture on trolley surface}. An alignment system was devised for mounting of the fixture, which should have prevented the interaction in the first place. The scheme adds another part to the fixture and uses tape to provide guidance when mounting from the side. A better yet centering mechanism was considered but machining resources were very limited to pursue in time. Should this measurement be performed again in the future, this more robust centering scheme will be constructed.
+
+\item \textbf{Readout} was a significant vulnerability. Without readout we are blind to the true location of the sensors after mounting and can only guess the potential placement offset. We resolved to connect with the Rpi through ssh over an ethernet cable (this got the Rpi blocked from the Fermilab network) after it was mounted on the trolley. Then the trolley moves upstream by a few azimuthal degrees as we carefully hold the ethernet cable, until the sensors sample the Q2L plates to roughly confirm good placement of the fixture. Then we bring the trolley back to the garage, remove the ethernet cable, and begin the run around the ring. 
+\end{enumerate}
+
+
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{VCNL_mounted_fixture.png}
+	\caption{The fixture mounted on the trolley as viewed through a flange. Visible is the VCNL4010 sensor that samples the inner quad plates, the Raspberry Pi board, and the battery in red. 
+	}\label{fig:VCNL_mounted_fixture}
+\end{figure}
+
+
+
+After the fixture modification and following the procedure outlined above to confirm good placement, on 12/12/2018 the trolley ran through all EQS plates around the ring allowing the two VCNL4010 sensors to sample the inner and outer plates continuously.
+The collected data versus run time is shown in Fig.~\ref{fig:VCNL_SensorData}, where the vertical axis is the measured distance from the sensors to the plates. 
+The distance was extracted from the sensor's raw ADC reading based on the calibration from Fig.~\ref{fig:VCNL_calibration}.
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{VCNL_SensorData.png}
+	\caption{The raw data collected by the VCNL4010 sensors facing opposite plates, plotted versus run time. Locations of quad and kicker plates are indicated.
+	}\label{fig:VCNL_SensorData}
+\end{figure}
+
+
+
+
+To translate the VCNL4010 proximity measurement to position of the plates in storage ring coordinates, we don't have the convenience of the AMD laser finding system for each measurement. Instead the baseline plan is to use the "known" EQS plates. 
+By matching the data on those plates, we can then go on and have a reliable estimation of the location of the unknown plates Q1S and Q4S.
+
+
+A more ambitious approach is to use the location of the trolley rails, which is known from an AMD survey (as in Fig.~\ref{fig:trolley_rails}).
+From that AMD survey we use specifically the location of the fiducial marker positioned on the downstream face of the trolley, the same where the VCNL fixture was mounted and therefore most relevant.
+An example of the trolley location around Q1S is shown in Fig.~\ref{fig:AMD_rails_location}. We preferred to fit the data for each quad so that the radial center of the trolley rails can be extracted for each azimuthal position.
+For details on this procedure see~\cite{Kargiantoulakis:doc15733}.
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{AMD_rails_location.png}
+	\caption{Location of trolley rails through Q1S from an AMD scan (black points, for the downstream marker only). The data is fitted with a function (blue line) which can be used in any azimuthal location. Residuals are generally within \SI{0.1}{mm}.
+	}\label{fig:AMD_rails_location}
+\end{figure}
+
+
+We need one more piece to express the proximity measurement as a radial plate location, and that is the distance from the center of the rails to each sensor. 
+Unfortunately this cannot be known independently with precision better than ~\SI{2}{mm}, as it was not possible to make that measurement before dismounting the fixture from the trolley. 
+Furthermore, this unknown factor may also pick up contributions from a potential rotation and/or vertical misplacement of the fixture, complicating its definition.
+
+We determine these geometric factors by matching the sensor data to the known plates' location from the AMD laser scan. Specifically the values for these factors are chosen to minimize the difference (between the sensors and the laser scan data) in the average radial position of the inner and outer plates of the known quads, \ie excluding  the reinstalled Q1S and Q4S.
+The mylar plate Q1L outer was also excluded from this calculation, as the comparison between VCNL4010 and the laser scan was most inconsistent there, as we will see in Table~\ref{tab:AvgDeviations_surveys}. This may be due to the sensors not sampling the wavy mylar accurately, or perhaps the mylar plate was most modified relative to the laser scan when its cage was inserted to the chamber. Either way we are justified to exclude this plate.
+
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{Q3L_surveys.png}
+	\caption{Surveys of the Q3L inner and outer plates in vacuum chamber 8. See text for details.
+	}\label{fig:Q3L_surveys}
+\end{figure}
+
+
+We can now get the result for the position of the quads plates by combining:
+\begin{itemize}
+\item the trolley rails location from the AMD scan, 
+\item the parameter for the distance from the center of the rails to each sensor, extracted from fitting to the laser scan data, and
+\item the proximity measurement of the sensor based on its calibration. 
+\end{itemize}
+The collected data versus time from Fig.~\ref{fig:VCNL_SensorData} can be mapped onto azimuthal location since it is obvious where each plate starts and ends, and given that the trolley is moving with mostly constant velocity. 
+
+As an example we plot the VCNL4010 results for the position of the inner and outer plates of Q3L in Fig.~\ref{fig:Q3L_surveys}.
+The VCNL results are the red triangles. There are actually two kinds of triangles, pointing up or down, for the two opposite directions in which the trolley passed through Q3L.
+The agreement between the two measurements is excellent, giving confidence to the reliability and reproducibility of the sensors.
+
+Also plotted in black are the laser scan data. Highlighted in green are the laser scan data from within \SI{5}{mm} from the vertical center, which should correspond roughly to the area sampled by the VCNL sensors. 
+The agreement between the two independent surveys is very good, especially in reproducing the radial variations across the length of the inner plate. 
+
+Finally on the same plot are the results of the survey performed through a flange, as described in Section~\ref{sec:ExtensionProbe}, plotted as blue crosses. Of course these only exist for the inner plate, which was the only one sampled.
+Again we notice the very limited azimuthal coverage. 
+The large RMS of the laser scan data around $\theta=250\degree$ suggests a significant tilt of the plate around the region sampled by the probes on the extension fixture.
+Since we don't have any information on the vertical coordinate in this figure (other than the green points which are taken around the vertical center) comparison of these survey results is not straightforward, but from Table~\ref{tab:Keyence_data} we see that the agreement with the laser scan is quite good.
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{Q3L_distanceBetweenPlates.png}
+	\caption{Distance between inner and outer plates of Q3L, from the VCNL4010 sensors (in red) and from the laser scan (in black). 
+	}\label{fig:Q3L_distanceBetweenPlates}
+\end{figure}
+
+
+Another quantity of interest is the distance between the opposite inner and outer plates, which is important for the actual electric field felt by the muons inside the storage volume. 
+This distance as extracted from the VCNL sensors and from the laser scan is plotted in Fig.~\ref{fig:Q3L_distanceBetweenPlates} for Q3L. The average distance over the entire plate is shown as a dashed line of the corresponding color for each survey.
+Again the agreement is good, less than \SI{0.2}{mm} between the two surveys. The design value of \SI{100}{mm} is shown as a solid line. 
+Both surveys agree that the average distance between the plates is slightly smaller than designed, which will lead to slightly stronger defocusing in the horizontal plane on Q3L.
+
+The data from all surveys and for all plates can be found in~\cite{Kargiantoulakis:doc16324}.
+
+
+
+\begin{figure}[]
+	\centering
+	\includegraphics[width=0.95\columnwidth]{Q4S_surveys.png}
+	\caption{Surveys of the Q4S inner and outer plates in vacuum chamber 10.
+	}\label{fig:Q4S_surveys}
+\end{figure}
+
+
+
+In Fig.~\ref{fig:Q4S_surveys} we show the survey results on the inner and outer plates of Q4S. 
+It is clear that there is a large discrepancy between the laser scan data and the in situ surveys. The VCNL data are consistent with the design position of the Q4S plates, and also the agreement between the two independent in situ surveys is excellent. 
+This supports the hypothesis that there could be a calculation error on the laser scan result.
+We notice also that the VCNL survey reproduces the azimuthal dependence of the radial position of the outer plate but not of the inner, suggesting that perhaps only the latter was modified upon reinstallation.
+In any case, the in situ surveys conclusively exclude the need for a potential corrective motion on the chamber.
+
+The average radial position of each quad inner and outer plate is listed in Table~\ref{tab:AvgDeviations_surveys}, from each survey. 
+It can be seen that the difference between the VCNL survey and the laser scan is always within \SI{0.5}{mm}, with the exception of the mylar Q1L outer plate. It is clear then that the >\SI{2}{mm} discrepancy on the Q4S plates is likely due to an error in the laser scan calculation.
+
+
+\begin{table}[t]
+\begin{center}
+\caption{Average radial position of quadrupole plates, comparison between different surveys. All values in mm.}
+
+\begin{tabularx}{\textwidth}{Y Y| >{\centering\arraybackslash}p{0.13\textwidth} >{\centering\arraybackslash}p{0.13\textwidth} >{\centering\arraybackslash}p{0.18\textwidth} >{\centering\arraybackslash}p{0.23\textwidth}}
+
+    &     &   \textbf{Laser{\newline} scan}    &    \multirow{ 2}{*}{\textbf{VCNL}}    &    \textbf{Difference{\newline}Scan-VCNL}    &    \textbf{Difference {\newline}Scan-Extension}  \\ \hline
+ {\multirow{2}{*}{\textbf{Q1S}}} &  Inner  & 7061.41    &    7061.58    &    -0.16    &    {\multirow{2}{*}{0.706}}  \\ 
+ {}                                              & Outer & 7161.94    &    7161.44    &    0.51      &               \\ \hline 
+ {\multirow{2}{*}{\textbf{Q1L}}} &  Inner  & 7061.47    &    7061.30    &    0.18    &    {\multirow{2}{*}{0.430}}  \\ 
+{}                                              & Outer &   7162.04    &    7160.63    &    1.41    &               \\ \hline 
+ {\multirow{2}{*}{\textbf{Q2S}}} &  Inner  & 7061.30    &    7061.31    &    -0.01    &    {\multirow{2}{*}{0.452}}  \\ 
+{}                                              & Outer &   7160.71    &    7160.76    &    -0.05    &               \\ \hline 
+ {\multirow{2}{*}{\textbf{Q2L}}} &  Inner  &  7062.06    &    7061.77    &   0.29    &    {\multirow{2}{*}{-0.280}} \\ 
+{}                                              & Outer &   7161.87    &    7161.77    &    0.11    &               \\  \hline
+ {\multirow{2}{*}{\textbf{Q3S}}} &  Inner  &  7061.60    &    7061.51    &    0.08    &               \\ 
+{}                                              & Outer &   7162.00    &    7162.41    &    -0.41    &                \\ \hline
+ {\multirow{2}{*}{\textbf{Q3L}}} &  Inner  &  7062.31    &    7062.23    &    0.08    &    {\multirow{2}{*}{0.072}} \\ 
+{}                                              & Outer &    7161.92    &    7161.79    &    0.13   &                \\ \hline
+ {\multirow{2}{*}{\textbf{Q4S}}} &  Inner  &  7063.85    &    7061.61    &    2.24    &    {\multirow{2}{*}{2.778}} \\ 
+{}                                              & Outer &    7164.24    &    7161.70    &    2.54   &         \\ \hline
+ {\multirow{2}{*}{\textbf{Q4L}}} &  Inner  &   7062.20    &    7062.64    &    -0.44    &    {\multirow{2}{*}{-0.364}}\\ 
+{}                                              & Outer &    7161.97    &    7161.58    &    0.39    &                \\ 
+
+\end{tabularx}
+\label{tab:AvgDeviations_surveys}
+\end{center}
+\end{table}
+
+
+The average difference in the radial position from the laser scan and the VCNL survey is listed in Table~\ref{tab:AvgDr}. The difference is averaged over all plates where the comparison is valid, \ie excluding the reinstalled Q1S and Q4S, as well as the mylar Q1L outer. We call these the "known" quads: Q1L (excluding here the outer mylar plate), Q2S, Q2L, Q3S, Q3L, Q4L.
+It is not surprising that the average difference is very small. Remember that we fixed the VCNL geometric factors exactly to minimize this difference over the quads where we know the laser scan data to be good. 
+The important point here is that the RMS of this difference over each plate is also very small. This suggests that the average difference would be well constrained even if we had picked a random quad to fix the VCNL parameters. 
+
+
+\begin{table}[t]
+\begin{center}
+\caption{Difference between the radial positions from the laser scan and from the VCNL survey, averaged over all the plates where the comparison is good. All values in mm. }
+
+\begin{tabular}{l |c c}  
+    &    $<\Delta r>$    &    RMS   \\ \hline
+"Known" inner plates &    0.03    &    0.23    \\ 
+"Known" outer plates &    0.03    &    0.26    \\ 
+\end{tabular}
+\label{tab:AvgDr}
+\end{center}
+\end{table}
+
+
+
+
+
+
+
+
+
+
+
